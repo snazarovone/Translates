@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-
-//        SessionManager.isSeenOnboarding = false
         
         coordinator.start()
         

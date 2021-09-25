@@ -13,14 +13,14 @@ class NavigationTitleView: BaseView {
     
     private let titleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .TranslatesBlack
+        lbl.textColor = .tBlack
         lbl.font = .systemFont(ofSize: 17, weight: .bold)
         lbl.textAlignment = .center
         return lbl
     }()
     private let subtitleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .TranslatesGrey
+        lbl.textColor = .tGrey
         lbl.font = .systemFont(ofSize: 11, weight: .regular)
         lbl.textAlignment = .center
         return lbl

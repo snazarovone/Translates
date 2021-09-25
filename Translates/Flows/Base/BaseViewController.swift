@@ -51,8 +51,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NVActivityIndicatorView.DEFAULT_TYPE = .circleStrokeSpin
-        
         initUI()
         initConstraints()
         initListeners()
@@ -66,14 +64,6 @@ class BaseViewController: UIViewController {
     
     func initListeners() {
         
-    }
-    
-    func startAnimating() {
-        UIApplication.shared.keyWindow?.startAnimating()
-    }
-    
-    func stopAnimating() {
-        UIApplication.shared.keyWindow?.stopAnimating()
     }
     
     private func addSeparatorNavigation() {
@@ -90,39 +80,21 @@ class BaseViewController: UIViewController {
         message: String? = nil,
         onButton: CompletionBlock? = nil
     ) {
-        Alert(
+        let alert = UIAlertController(
             title: title ?? "error".localized,
-            message: message ?? "internet_error".localized
+            message: message,
+            preferredStyle: .alert
         )
-        .addAction("ok".localized, style: .default) { _ in
-            onButton?()
-        }
-        .show()
-    }
-    
-    func showQuetionDialogQuetion(
-        title: String,
-        message: String,
-        onYes: CompletionBlock?,
-        onNo: CompletionBlock?) {
-        Alert(
-            title: title,
-            message: message
+        
+        let action = UIAlertAction(
+            title: "ok".localized,
+            style: .default,
+            handler: ({ _ in
+                onButton?()
+            })
         )
-        .addAction("yes".localized, style: .default) { _ in
-            onYes?()
-        }
-        .addAction("no".localized, style: .cancel) { _ in
-            onNo?()
-        }
-        .show()
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
-}
-
-extension BaseViewController {
-    
-    func onAnimating(isStart: Bool) {
-        isStart ? startAnimating() : stopAnimating()
-    }
-    
 }

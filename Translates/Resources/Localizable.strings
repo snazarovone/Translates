@@ -1,6 +1,8 @@
 /* Alerts Description */
+"internet_error"                = "Проверьте интернет соединения и повторите попытку";
 
 /* Alerts Title */
+"error"                         = "Ошибка";
 
 /* Buttons */
 "skip"                          = "Пропустить";
@@ -9,6 +11,7 @@
 /* Alerts */
 "no"                            = "Нет";
 "yes"                           = "Да";
+"ok"                            = "ОК";
 
 /* Screens */
 

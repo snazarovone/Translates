@@ -23,7 +23,7 @@ class BaseNavigationController: UINavigationController {
         
         self.navigationBar.titleTextAttributes = [
             .font: UIFont.systemFont(ofSize: 17, weight: .bold),
-            .foregroundColor: UIColor.TranslatesBlack
+            .foregroundColor: UIColor.tBlack
         ]
         
         self.delegate = self

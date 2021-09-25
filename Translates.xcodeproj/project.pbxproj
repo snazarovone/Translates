@@ -35,7 +35,6 @@
 		ED4B60DD26FF72B9005A1352 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60D626FF72B9005A1352 /* Colors.swift */; };
 		ED4B60DE26FF72B9005A1352 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60D726FF72B9005A1352 /* BaseView.swift */; };
 		ED4B60E926FF73A0005A1352 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60E426FF73A0005A1352 /* BaseViewController.swift */; };
-		ED4B60EA26FF73A0005A1352 /* BlockingActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60E526FF73A0005A1352 /* BlockingActivityIndicator.swift */; };
 		ED4B60EB26FF73A0005A1352 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60E626FF73A0005A1352 /* UIViewController+Extension.swift */; };
 		ED4B60EC26FF73A0005A1352 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4B60E726FF73A0005A1352 /* Localizable.strings */; };
 		ED4B60ED26FF73A0005A1352 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60E826FF73A0005A1352 /* String+Extension.swift */; };
@@ -74,7 +73,6 @@
 		ED4B60D626FF72B9005A1352 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ED4B60D726FF72B9005A1352 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		ED4B60E426FF73A0005A1352 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		ED4B60E526FF73A0005A1352 /* BlockingActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingActivityIndicator.swift; sourceTree = "<group>"; };
 		ED4B60E626FF73A0005A1352 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		ED4B60E726FF73A0005A1352 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		ED4B60E826FF73A0005A1352 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -132,10 +130,9 @@
 		ED4B606A26FF4DFA005A1352 /* Translates */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B60F426FF748E005A1352 /* Managers */,
-				ED4B60BE26FF721A005A1352 /* New Group */,
 				ED4B608926FF6E89005A1352 /* Application */,
 				ED4B608826FF6E5D005A1352 /* Resources */,
+				ED4B60F426FF748E005A1352 /* Managers */,
 				ED4B608A26FF6EE9005A1352 /* Source */,
 				ED4B609026FF6F43005A1352 /* Factories */,
 				ED4B609326FF6F6D005A1352 /* Flows */,
@@ -296,13 +293,6 @@
 			path = Translates;
 			sourceTree = "<group>";
 		};
-		ED4B60BE26FF721A005A1352 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		ED4B60E026FF7354005A1352 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,7 +313,6 @@
 		ED4B60E226FF7364005A1352 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B60E526FF73A0005A1352 /* BlockingActivityIndicator.swift */,
 				ED4B60D726FF72B9005A1352 /* BaseView.swift */,
 			);
 			path = Base;
@@ -476,7 +465,6 @@
 				ED4B60E926FF73A0005A1352 /* BaseViewController.swift in Sources */,
 				ED4B60DC26FF72B9005A1352 /* BaseNavigationController.swift in Sources */,
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
-				ED4B60EA26FF73A0005A1352 /* BlockingActivityIndicator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
 				ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */,
@@ -621,7 +609,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C9Y2Z2X7Z2;
-				INFOPLIST_FILE = Translates/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Translates/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -642,7 +630,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C9Y2Z2X7Z2;
-				INFOPLIST_FILE = Translates/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Translates/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
