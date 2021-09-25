@@ -15,6 +15,9 @@ def available_pods
   # UI
   pod 'SnapKit'
   
+  # Animation
+  pod 'lottie-ios'
+  
 end
 
 target 'Translates' do

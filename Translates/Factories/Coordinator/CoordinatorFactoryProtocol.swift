@@ -10,5 +10,7 @@ import UIKit
 
 protocol CoordinatorFactoryProtocol {
     
+    func makeTranslateLauncher(router: Routable) -> Coordinatable & TranslateLauncherCoordinatorOutput
+    
     func makeRootCoordinator(router: Routable) -> Coordinatable & RootCoordinatorOutput
 }

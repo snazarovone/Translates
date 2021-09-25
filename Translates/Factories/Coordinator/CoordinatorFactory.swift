@@ -17,6 +17,12 @@ final class CoordinatorFactory {
 // MARK: - CoordinatorFactoryProtocol
 
 extension CoordinatorFactory: CoordinatorFactoryProtocol {
+    
+    func makeTranslateLauncher(router: Routable)
+    -> Coordinatable & TranslateLauncherCoordinatorOutput {
+        TranslateLauncherCoordinator(with: modulesFactory, router: router)
+    }
+    
     func makeRootCoordinator(router: Routable) -> Coordinatable & RootCoordinatorOutput {
         RootCoordinator(with: modulesFactory, router: router)
     }

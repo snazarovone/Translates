@@ -39,6 +39,15 @@
 		ED4B60EC26FF73A0005A1352 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4B60E726FF73A0005A1352 /* Localizable.strings */; };
 		ED4B60ED26FF73A0005A1352 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60E826FF73A0005A1352 /* String+Extension.swift */; };
 		ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60EF26FF7461005A1352 /* NavigationItemManager.swift */; };
+		ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73826FF7B63001734B3 /* TranslateLauncherCoordinator.swift */; };
+		ED9AB74126FF7B63001734B3 /* TranslateLauncherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73926FF7B63001734B3 /* TranslateLauncherFactory.swift */; };
+		ED9AB74226FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73A26FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift */; };
+		ED9AB74326FF7B63001734B3 /* TranslateLauncherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73B26FF7B63001734B3 /* TranslateLauncherPresenter.swift */; };
+		ED9AB74426FF7B63001734B3 /* TranslateLauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73C26FF7B63001734B3 /* TranslateLauncherViewController.swift */; };
+		ED9AB74526FF7B63001734B3 /* TranslateLauncherAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73D26FF7B63001734B3 /* TranslateLauncherAssembly.swift */; };
+		ED9AB74626FF7B63001734B3 /* TranslateLauncherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73E26FF7B63001734B3 /* TranslateLauncherInteractor.swift */; };
+		ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73F26FF7B63001734B3 /* TranslateLauncherViewProtocol.swift */; };
+		ED9AB77126FF7CCC001734B3 /* book-with-bookmark.json in Resources */ = {isa = PBXBuildFile; fileRef = ED9AB77026FF7CCC001734B3 /* book-with-bookmark.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +86,15 @@
 		ED4B60E726FF73A0005A1352 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		ED4B60E826FF73A0005A1352 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		ED4B60EF26FF7461005A1352 /* NavigationItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemManager.swift; sourceTree = "<group>"; };
+		ED9AB73826FF7B63001734B3 /* TranslateLauncherCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherCoordinator.swift; sourceTree = "<group>"; };
+		ED9AB73926FF7B63001734B3 /* TranslateLauncherFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherFactory.swift; sourceTree = "<group>"; };
+		ED9AB73A26FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherCoordinatorOutput.swift; sourceTree = "<group>"; };
+		ED9AB73B26FF7B63001734B3 /* TranslateLauncherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherPresenter.swift; sourceTree = "<group>"; };
+		ED9AB73C26FF7B63001734B3 /* TranslateLauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherViewController.swift; sourceTree = "<group>"; };
+		ED9AB73D26FF7B63001734B3 /* TranslateLauncherAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherAssembly.swift; sourceTree = "<group>"; };
+		ED9AB73E26FF7B63001734B3 /* TranslateLauncherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherInteractor.swift; sourceTree = "<group>"; };
+		ED9AB73F26FF7B63001734B3 /* TranslateLauncherViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherViewProtocol.swift; sourceTree = "<group>"; };
+		ED9AB77026FF7CCC001734B3 /* book-with-bookmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "book-with-bookmark.json"; sourceTree = "<group>"; };
 		FF01BA57E561B542872D3E17 /* Pods_Translates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Translates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +260,7 @@
 			children = (
 				ED4B609F26FF7089005A1352 /* RootFactory.swift */,
 				ED4B60A226FF7089005A1352 /* ModulesFactory.swift */,
+				ED9AB73926FF7B63001734B3 /* TranslateLauncherFactory.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -251,6 +270,7 @@
 			children = (
 				ED4B609926FF7089005A1352 /* AppCoordinator.swift */,
 				ED4B609426FF6F8E005A1352 /* Base */,
+				ED9AB73726FF7B30001734B3 /* TranslateLauncher */,
 				ED4B609826FF7066005A1352 /* TranslatesCoordinator */,
 			);
 			path = Flows;
@@ -326,6 +346,37 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		ED9AB73726FF7B30001734B3 /* TranslateLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				ED9AB73826FF7B63001734B3 /* TranslateLauncherCoordinator.swift */,
+				ED9AB73A26FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift */,
+				ED9AB74926FF7B6B001734B3 /* TranslateLauncher */,
+			);
+			path = TranslateLauncher;
+			sourceTree = "<group>";
+		};
+		ED9AB74926FF7B6B001734B3 /* TranslateLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				ED9AB76F26FF7CB9001734B3 /* Assets */,
+				ED9AB73B26FF7B63001734B3 /* TranslateLauncherPresenter.swift */,
+				ED9AB73C26FF7B63001734B3 /* TranslateLauncherViewController.swift */,
+				ED9AB73D26FF7B63001734B3 /* TranslateLauncherAssembly.swift */,
+				ED9AB73E26FF7B63001734B3 /* TranslateLauncherInteractor.swift */,
+				ED9AB73F26FF7B63001734B3 /* TranslateLauncherViewProtocol.swift */,
+			);
+			path = TranslateLauncher;
+			sourceTree = "<group>";
+		};
+		ED9AB76F26FF7CB9001734B3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				ED9AB77026FF7CCC001734B3 /* book-with-bookmark.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +438,7 @@
 			files = (
 				ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */,
 				ED4B60EC26FF73A0005A1352 /* Localizable.strings in Resources */,
+				ED9AB77126FF7CCC001734B3 /* book-with-bookmark.json in Resources */,
 				ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +498,8 @@
 				ED4B60AA26FF7089005A1352 /* CoordinatorFactoryProtocol.swift in Sources */,
 				ED4B60AD26FF7089005A1352 /* Routable.swift in Sources */,
 				ED4B60DA26FF72B9005A1352 /* BasePresenterOutput.swift in Sources */,
+				ED9AB74626FF7B63001734B3 /* TranslateLauncherInteractor.swift in Sources */,
+				ED9AB74326FF7B63001734B3 /* TranslateLauncherPresenter.swift in Sources */,
 				ED4B60B326FF7089005A1352 /* Router.swift in Sources */,
 				ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */,
 				ED4B60ED26FF73A0005A1352 /* String+Extension.swift in Sources */,
@@ -457,10 +511,15 @@
 				ED4B60C026FF7229005A1352 /* AppDelegate.swift in Sources */,
 				ED4B60DD26FF72B9005A1352 /* Colors.swift in Sources */,
 				ED4B60D826FF72B9005A1352 /* UIView+Extensions.swift in Sources */,
+				ED9AB74126FF7B63001734B3 /* TranslateLauncherFactory.swift in Sources */,
 				ED4B60DE26FF72B9005A1352 /* BaseView.swift in Sources */,
 				ED4B60B526FF7089005A1352 /* BaseCoordinator.swift in Sources */,
+				ED9AB74226FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift in Sources */,
+				ED9AB74526FF7B63001734B3 /* TranslateLauncherAssembly.swift in Sources */,
+				ED9AB74426FF7B63001734B3 /* TranslateLauncherViewController.swift in Sources */,
 				ED4B60DB26FF72B9005A1352 /* UINavigatoionBar+Extension.swift in Sources */,
 				ED4B60AC26FF7089005A1352 /* MainViewController.swift in Sources */,
+				ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */,
 				ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */,
 				ED4B60E926FF73A0005A1352 /* BaseViewController.swift in Sources */,
 				ED4B60DC26FF72B9005A1352 /* BaseNavigationController.swift in Sources */,
@@ -468,6 +527,7 @@
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
 				ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */,
+				ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

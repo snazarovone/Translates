@@ -9,13 +9,8 @@
 import Foundation
 
 private enum LaunchInstructor {
-    
+    case launcher
     case main
-        
-    static func setup() -> LaunchInstructor {
-        return .main
-    }
-    
 }
 
 final class AppCoordinator: BaseCoordinator {
@@ -23,9 +18,7 @@ final class AppCoordinator: BaseCoordinator {
     private let factory: CoordinatorFactoryProtocol
     private let router: Routable
     
-    private var instructor: LaunchInstructor {
-        LaunchInstructor.setup()
-    }
+    private var instructor: LaunchInstructor = .launcher
     
     init(router: Routable, factory: CoordinatorFactory) {
         self.router = router
@@ -39,6 +32,8 @@ final class AppCoordinator: BaseCoordinator {
 extension AppCoordinator: Coordinatable {
     func start() {
         switch instructor {
+        case .launcher:
+            performLauncher()
         case .main:
             performMainFlow()
         }
@@ -49,13 +44,29 @@ extension AppCoordinator: Coordinatable {
 
 private extension AppCoordinator {
     
+    func performLauncher() {
+        let coordinator = factory.makeTranslateLauncher(router: router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            guard let self = self,
+                let coordinator = coordinator else {
+                return
+            }
+            
+            self.instructor = .main
+            self.start()
+            self.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
+    
     func performMainFlow() {
         let coordinator = factory.makeRootCoordinator(router: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
-            guard
-                let self = self,
-                let coordinator = coordinator
-                else { return }
+            guard let self = self,
+                let coordinator = coordinator else {
+                return
+            }
             
             self.start()
             self.removeDependency(coordinator)

@@ -8,8 +8,15 @@
 
 
 final class ModulesFactory:
-    RootFactory
+    RootFactory,
+    TranslateLauncherFactory
 {
+    func makeTranslateLauncherView() -> TranslateLauncherViewProtocol {
+        let view = TranslateLauncherViewController()
+        TranslateLauncherAssembly.assembly(with: view)
+        return view
+    }
+    
     func makeMainView() -> MainViewProtocol {
         let view = MainViewController()
 //        HomeAssembly.assembly(with: view)
