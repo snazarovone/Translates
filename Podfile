@@ -7,6 +7,7 @@ def available_pods
   use_frameworks!
 
   # Networking
+  pod 'Moya'
   pod 'Kingfisher'
 
   # Utilities

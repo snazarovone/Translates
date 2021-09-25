@@ -43,8 +43,7 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         }
         
         placeholderView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.centerX.centerY.equalToSuperview()
             make.left.equalToSuperview().offset(32)
         }
     }

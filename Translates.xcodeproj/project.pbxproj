@@ -29,6 +29,20 @@
 		ED10484526FFAE83007E4217 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */; };
 		ED10484926FFB501007E4217 /* SearchPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484826FFB501007E4217 /* SearchPlaceholder.swift */; };
 		ED10484D26FFBB33007E4217 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484C26FFBB33007E4217 /* Utils.swift */; };
+		ED10485726FFBE3A007E4217 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484F26FFBE3A007E4217 /* BaseTargetType.swift */; };
+		ED10485826FFBE3A007E4217 /* BaseRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485026FFBE3A007E4217 /* BaseRequestInterceptor.swift */; };
+		ED10485926FFBE3A007E4217 /* APIEmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485126FFBE3A007E4217 /* APIEmptyData.swift */; };
+		ED10485A26FFBE3A007E4217 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485226FFBE3A007E4217 /* APIErrorResponse.swift */; };
+		ED10485B26FFBE3A007E4217 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485326FFBE3A007E4217 /* BaseAPIService.swift */; };
+		ED10485C26FFBE3A007E4217 /* BaseAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485426FFBE3A007E4217 /* BaseAPIServiceProtocol.swift */; };
+		ED10485D26FFBE3A007E4217 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485526FFBE3A007E4217 /* Connectivity.swift */; };
+		ED10485E26FFBE3A007E4217 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10485626FFBE3A007E4217 /* ErrorModel.swift */; };
+		ED10487B26FFBFAD007E4217 /* APITargetMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10487726FFBFAD007E4217 /* APITargetMain.swift */; };
+		ED10487C26FFBFAD007E4217 /* APIWrapperAPIMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10487826FFBFAD007E4217 /* APIWrapperAPIMain.swift */; };
+		ED10487D26FFBFAD007E4217 /* APIServiceProtocolAPIMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10487926FFBFAD007E4217 /* APIServiceProtocolAPIMain.swift */; };
+		ED10487E26FFBFAD007E4217 /* APIServiceAPIMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10487A26FFBFAD007E4217 /* APIServiceAPIMain.swift */; };
+		ED10488926FFC075007E4217 /* AppTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10488826FFC075007E4217 /* AppTarget.swift */; };
+		ED10488F26FFC183007E4217 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10488E26FFC183007E4217 /* SearchRequest.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -98,6 +112,20 @@
 		ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
 		ED10484826FFB501007E4217 /* SearchPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholder.swift; sourceTree = "<group>"; };
 		ED10484C26FFBB33007E4217 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		ED10484F26FFBE3A007E4217 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		ED10485026FFBE3A007E4217 /* BaseRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestInterceptor.swift; sourceTree = "<group>"; };
+		ED10485126FFBE3A007E4217 /* APIEmptyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEmptyData.swift; sourceTree = "<group>"; };
+		ED10485226FFBE3A007E4217 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		ED10485326FFBE3A007E4217 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
+		ED10485426FFBE3A007E4217 /* BaseAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIServiceProtocol.swift; sourceTree = "<group>"; };
+		ED10485526FFBE3A007E4217 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		ED10485626FFBE3A007E4217 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		ED10487726FFBFAD007E4217 /* APITargetMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetMain.swift; sourceTree = "<group>"; };
+		ED10487826FFBFAD007E4217 /* APIWrapperAPIMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWrapperAPIMain.swift; sourceTree = "<group>"; };
+		ED10487926FFBFAD007E4217 /* APIServiceProtocolAPIMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocolAPIMain.swift; sourceTree = "<group>"; };
+		ED10487A26FFBFAD007E4217 /* APIServiceAPIMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAPIMain.swift; sourceTree = "<group>"; };
+		ED10488826FFC075007E4217 /* AppTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTarget.swift; sourceTree = "<group>"; };
+		ED10488E26FFC183007E4217 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -209,13 +237,6 @@
 			path = Dictionary;
 			sourceTree = "<group>";
 		};
-		ED10483B26FFABD6007E4217 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		ED10484026FFADA1007E4217 /* Search Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +251,75 @@
 				ED10484826FFB501007E4217 /* SearchPlaceholder.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		ED10487026FFBEC5007E4217 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED10487126FFBECF007E4217 /* Services */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED10487126FFBECF007E4217 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED10488826FFC075007E4217 /* AppTarget.swift */,
+				ED10484F26FFBE3A007E4217 /* BaseTargetType.swift */,
+				ED10485026FFBE3A007E4217 /* BaseRequestInterceptor.swift */,
+				ED10485326FFBE3A007E4217 /* BaseAPIService.swift */,
+				ED10485426FFBE3A007E4217 /* BaseAPIServiceProtocol.swift */,
+				ED10485526FFBE3A007E4217 /* Connectivity.swift */,
+				ED10487226FFBF30007E4217 /* API Main */,
+				ED10488C26FFC165007E4217 /* Rest API */,
+				ED10487326FFBF53007E4217 /* Models */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED10487226FFBF30007E4217 /* API Main */ = {
+			isa = PBXGroup;
+			children = (
+				ED10487726FFBFAD007E4217 /* APITargetMain.swift */,
+				ED10487926FFBFAD007E4217 /* APIServiceProtocolAPIMain.swift */,
+				ED10487A26FFBFAD007E4217 /* APIServiceAPIMain.swift */,
+				ED10487826FFBFAD007E4217 /* APIWrapperAPIMain.swift */,
+			);
+			path = "API Main";
+			sourceTree = "<group>";
+		};
+		ED10487326FFBF53007E4217 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED10487426FFBF65007E4217 /* Base */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED10487426FFBF65007E4217 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ED10485126FFBE3A007E4217 /* APIEmptyData.swift */,
+				ED10485226FFBE3A007E4217 /* APIErrorResponse.swift */,
+				ED10485626FFBE3A007E4217 /* ErrorModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ED10488C26FFC165007E4217 /* Rest API */ = {
+			isa = PBXGroup;
+			children = (
+				ED10488D26FFC170007E4217 /* Search */,
+			);
+			path = "Rest API";
+			sourceTree = "<group>";
+		};
+		ED10488D26FFC170007E4217 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ED10488E26FFC183007E4217 /* SearchRequest.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		ED4B605F26FF4DFA005A1352 = {
@@ -254,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				ED4B608926FF6E89005A1352 /* Application */,
+				ED10487026FFBEC5007E4217 /* Services */,
 				ED4B608826FF6E5D005A1352 /* Resources */,
 				ED4B60F426FF748E005A1352 /* Managers */,
 				ED4B608A26FF6EE9005A1352 /* Source */,
@@ -377,7 +468,6 @@
 		ED4B609326FF6F6D005A1352 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				ED10483B26FFABD6007E4217 /* New Group */,
 				ED4B609926FF7089005A1352 /* AppCoordinator.swift */,
 				ED4B609426FF6F8E005A1352 /* Base */,
 				ED9AB73726FF7B30001734B3 /* TranslateLauncher */,
@@ -624,6 +714,7 @@
 				ED9AB78826FFA203001734B3 /* TabBarAssembly.swift in Sources */,
 				ED9AB78326FFA203001734B3 /* TabBarCoordinator.swift in Sources */,
 				ED4B60B226FF7089005A1352 /* ModulesFactory.swift in Sources */,
+				ED10485D26FFBE3A007E4217 /* Connectivity.swift in Sources */,
 				ED10484226FFADBE007E4217 /* SearchBarTranslate.swift in Sources */,
 				ED4B60AA26FF7089005A1352 /* CoordinatorFactoryProtocol.swift in Sources */,
 				ED10483026FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift in Sources */,
@@ -632,6 +723,7 @@
 				ED4B60DA26FF72B9005A1352 /* BasePresenterOutput.swift in Sources */,
 				ED9AB74626FF7B63001734B3 /* TranslateLauncherInteractor.swift in Sources */,
 				ED10483426FFA7DC007E4217 /* DictionaryInteractor.swift in Sources */,
+				ED10485B26FFBE3A007E4217 /* BaseAPIService.swift in Sources */,
 				ED9AB74326FF7B63001734B3 /* TranslateLauncherPresenter.swift in Sources */,
 				ED4B60B326FF7089005A1352 /* Router.swift in Sources */,
 				ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */,
@@ -640,35 +732,47 @@
 				ED9AB78A26FFA203001734B3 /* TabBarViewProtocol.swift in Sources */,
 				ED4B60B126FF7089005A1352 /* Blocks.swift in Sources */,
 				ED9AB78526FFA203001734B3 /* TabBarCoordinatorOutput.swift in Sources */,
+				ED10485826FFBE3A007E4217 /* BaseRequestInterceptor.swift in Sources */,
 				ED4B60C026FF7229005A1352 /* AppDelegate.swift in Sources */,
 				ED9AB78626FFA203001734B3 /* TabBarPresenter.swift in Sources */,
 				ED4B60DD26FF72B9005A1352 /* Colors.swift in Sources */,
 				ED10481A26FFA4BF007E4217 /* SearchAssembly.swift in Sources */,
 				ED4B60D826FF72B9005A1352 /* UIView+Extensions.swift in Sources */,
+				ED10487D26FFBFAD007E4217 /* APIServiceProtocolAPIMain.swift in Sources */,
 				ED10481826FFA4BF007E4217 /* SearchPresenter.swift in Sources */,
+				ED10488926FFC075007E4217 /* AppTarget.swift in Sources */,
 				ED10481B26FFA4BF007E4217 /* SearchInteractor.swift in Sources */,
 				ED9AB74126FF7B63001734B3 /* TranslateLauncherFactory.swift in Sources */,
 				ED4B60DE26FF72B9005A1352 /* BaseView.swift in Sources */,
+				ED10485C26FFBE3A007E4217 /* BaseAPIServiceProtocol.swift in Sources */,
+				ED10487B26FFBFAD007E4217 /* APITargetMain.swift in Sources */,
 				ED4B60B526FF7089005A1352 /* BaseCoordinator.swift in Sources */,
+				ED10485E26FFBE3A007E4217 /* ErrorModel.swift in Sources */,
 				ED9AB74226FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift in Sources */,
 				ED9AB74526FF7B63001734B3 /* TranslateLauncherAssembly.swift in Sources */,
 				ED9AB74426FF7B63001734B3 /* TranslateLauncherViewController.swift in Sources */,
 				ED4B60DB26FF72B9005A1352 /* UINavigatoionBar+Extension.swift in Sources */,
+				ED10485726FFBE3A007E4217 /* BaseTargetType.swift in Sources */,
+				ED10485A26FFBE3A007E4217 /* APIErrorResponse.swift in Sources */,
 				ED10481926FFA4BF007E4217 /* SearchViewController.swift in Sources */,
 				ED10484D26FFBB33007E4217 /* Utils.swift in Sources */,
 				ED10482E26FFA7DC007E4217 /* DictionaryCoordinator.swift in Sources */,
 				ED10483226FFA7DC007E4217 /* DictionaryViewController.swift in Sources */,
+				ED10487C26FFBFAD007E4217 /* APIWrapperAPIMain.swift in Sources */,
 				ED9AB78926FFA203001734B3 /* TabBarInteractor.swift in Sources */,
 				ED9AB78726FFA203001734B3 /* TabBarViewController.swift in Sources */,
 				ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */,
 				ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */,
+				ED10488F26FFC183007E4217 /* SearchRequest.swift in Sources */,
 				ED10483126FFA7DC007E4217 /* DictionaryPresenter.swift in Sources */,
 				ED4B60E926FF73A0005A1352 /* BaseViewController.swift in Sources */,
 				ED10483326FFA7DC007E4217 /* DictionaryAssembly.swift in Sources */,
+				ED10485926FFBE3A007E4217 /* APIEmptyData.swift in Sources */,
 				ED10481C26FFA4BF007E4217 /* SearchViewProtocol.swift in Sources */,
 				ED10482F26FFA7DC007E4217 /* DictionaryFactory.swift in Sources */,
 				ED10481726FFA4BF007E4217 /* SearchCoordinatorOutput.swift in Sources */,
 				ED4B60DC26FF72B9005A1352 /* BaseNavigationController.swift in Sources */,
+				ED10487E26FFBFAD007E4217 /* APIServiceAPIMain.swift in Sources */,
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
 				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
