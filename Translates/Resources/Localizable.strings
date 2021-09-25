@@ -19,5 +19,6 @@
 
 /* Screens */
 "search_placeholder"            = "Поиск";
+"search_and_add_pl"             = "Ищите слова и списки слов, добавляйте на изучение";
 
 /* View Controllers Name */

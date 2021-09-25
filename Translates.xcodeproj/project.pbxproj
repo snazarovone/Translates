@@ -27,6 +27,8 @@
 		ED10483D26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10483C26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift */; };
 		ED10484226FFADBE007E4217 /* SearchBarTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484126FFADBE007E4217 /* SearchBarTranslate.swift */; };
 		ED10484526FFAE83007E4217 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */; };
+		ED10484926FFB501007E4217 /* SearchPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484826FFB501007E4217 /* SearchPlaceholder.swift */; };
+		ED10484D26FFBB33007E4217 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484C26FFBB33007E4217 /* Utils.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -94,6 +96,8 @@
 		ED10483C26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationsProtocol.swift; sourceTree = "<group>"; };
 		ED10484126FFADBE007E4217 /* SearchBarTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTranslate.swift; sourceTree = "<group>"; };
 		ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
+		ED10484826FFB501007E4217 /* SearchPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholder.swift; sourceTree = "<group>"; };
+		ED10484C26FFBB33007E4217 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -220,6 +224,14 @@
 			path = "Search Bar";
 			sourceTree = "<group>";
 		};
+		ED10484726FFB49A007E4217 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				ED10484826FFB501007E4217 /* SearchPlaceholder.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		ED4B605F26FF4DFA005A1352 = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +330,7 @@
 				ED4B60E626FF73A0005A1352 /* UIViewController+Extension.swift */,
 				ED4B60E826FF73A0005A1352 /* String+Extension.swift */,
 				ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */,
+				ED10484C26FFBB33007E4217 /* Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +423,7 @@
 				ED4B60E226FF7364005A1352 /* Base */,
 				ED4B60E126FF735D005A1352 /* NavigationBar */,
 				ED10484026FFADA1007E4217 /* Search Bar */,
+				ED10484726FFB49A007E4217 /* UIView */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -641,6 +655,7 @@
 				ED9AB74426FF7B63001734B3 /* TranslateLauncherViewController.swift in Sources */,
 				ED4B60DB26FF72B9005A1352 /* UINavigatoionBar+Extension.swift in Sources */,
 				ED10481926FFA4BF007E4217 /* SearchViewController.swift in Sources */,
+				ED10484D26FFBB33007E4217 /* Utils.swift in Sources */,
 				ED10482E26FFA7DC007E4217 /* DictionaryCoordinator.swift in Sources */,
 				ED10483226FFA7DC007E4217 /* DictionaryViewController.swift in Sources */,
 				ED9AB78926FFA203001734B3 /* TabBarInteractor.swift in Sources */,
@@ -657,6 +672,7 @@
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
 				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
+				ED10484926FFB501007E4217 /* SearchPlaceholder.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
 				ED10483D26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift in Sources */,
 				ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */,

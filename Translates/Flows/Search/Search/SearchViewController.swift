@@ -18,6 +18,7 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     var onCompletion: CompletionBlock?
     
     private let searchBar = SearchBarTranslate()
+    private let placeholderView = SearchPlaceholder()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,19 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     }
     
     override func initUI() {
-        view.addSubview(searchBar)
+        view.addSubviews(searchBar, placeholderView)
     }
     
     override func initConstraints() {
         searchBar.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalToSuperview().offset(topbarHeight)
+        }
+        
+        placeholderView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().offset(32)
         }
     }
     
