@@ -13,6 +13,10 @@
 "yes"                           = "Да";
 "ok"                            = "ОК";
 
+/* TabBar Items */
+"tab_search"                    = "Поиск";
+"tab_dictionary"                = "Словарь";
+
 /* Screens */
 
 /* View Controllers Name */

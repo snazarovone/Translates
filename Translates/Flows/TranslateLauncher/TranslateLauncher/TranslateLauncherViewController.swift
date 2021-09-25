@@ -48,6 +48,7 @@ class TranslateLauncherViewController: BaseViewController, TranslateLauncherAsse
         animationView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(32)
             make.centerX.centerY.equalToSuperview()
+            make.height.equalTo(256)
         }
     }
     

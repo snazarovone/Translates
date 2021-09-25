@@ -8,18 +8,32 @@
 
 
 final class ModulesFactory:
-    RootFactory,
-    TranslateLauncherFactory
+    TranslateLauncherFactory,
+    TabBarFactory,
+    SearchFactory,
+    DictionaryFactory
 {
-    func makeTranslateLauncherView() -> TranslateLauncherViewProtocol {
-        let view = TranslateLauncherViewController()
-        TranslateLauncherAssembly.assembly(with: view)
+    func makeDictionaryView() -> DictionaryViewProtocol {
+        let view = DictionaryViewController()
+        DictionaryAssembly.assembly(with: view)
         return view
     }
     
-    func makeMainView() -> MainViewProtocol {
-        let view = MainViewController()
-//        HomeAssembly.assembly(with: view)
+    func makeSearchView() -> SearchViewProtocol {
+        let view = SearchViewController()
+        SearchAssembly.assembly(with: view)
+        return view
+    }
+    
+    func makeTabBarView() -> TabBarViewProtocol {
+        let view = TabBarViewController()
+        TabBarAssembly.assembly(with: view)
+        return view
+    }
+    
+    func makeTranslateLauncherView() -> TranslateLauncherViewProtocol {
+        let view = TranslateLauncherViewController()
+        TranslateLauncherAssembly.assembly(with: view)
         return view
     }
 }

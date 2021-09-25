@@ -61,7 +61,10 @@ private extension AppCoordinator {
     }
     
     func performMainFlow() {
-        let coordinator = factory.makeRootCoordinator(router: router)
+        let coordinator = factory.makeTabBarCoordinator(
+            router: router,
+            coordinatorFactory: factory
+        )
         coordinator.finishFlow = { [weak self, weak coordinator] in
             guard let self = self,
                 let coordinator = coordinator else {

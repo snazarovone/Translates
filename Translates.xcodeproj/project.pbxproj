@@ -8,22 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		01518AF753B55473FE97066B /* Pods_Translates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF01BA57E561B542872D3E17 /* Pods_Translates.framework */; };
+		ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10480D26FFA4BF007E4217 /* SearchCoordinator.swift */; };
+		ED10481626FFA4BF007E4217 /* SearchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10480E26FFA4BF007E4217 /* SearchFactory.swift */; };
+		ED10481726FFA4BF007E4217 /* SearchCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10480F26FFA4BF007E4217 /* SearchCoordinatorOutput.swift */; };
+		ED10481826FFA4BF007E4217 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10481026FFA4BF007E4217 /* SearchPresenter.swift */; };
+		ED10481926FFA4BF007E4217 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10481126FFA4BF007E4217 /* SearchViewController.swift */; };
+		ED10481A26FFA4BF007E4217 /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10481226FFA4BF007E4217 /* SearchAssembly.swift */; };
+		ED10481B26FFA4BF007E4217 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10481326FFA4BF007E4217 /* SearchInteractor.swift */; };
+		ED10481C26FFA4BF007E4217 /* SearchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10481426FFA4BF007E4217 /* SearchViewProtocol.swift */; };
+		ED10482E26FFA7DC007E4217 /* DictionaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482626FFA7DC007E4217 /* DictionaryCoordinator.swift */; };
+		ED10482F26FFA7DC007E4217 /* DictionaryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482726FFA7DC007E4217 /* DictionaryFactory.swift */; };
+		ED10483026FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482826FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift */; };
+		ED10483126FFA7DC007E4217 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482926FFA7DC007E4217 /* DictionaryPresenter.swift */; };
+		ED10483226FFA7DC007E4217 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482A26FFA7DC007E4217 /* DictionaryViewController.swift */; };
+		ED10483326FFA7DC007E4217 /* DictionaryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482B26FFA7DC007E4217 /* DictionaryAssembly.swift */; };
+		ED10483426FFA7DC007E4217 /* DictionaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482C26FFA7DC007E4217 /* DictionaryInteractor.swift */; };
+		ED10483526FFA7DC007E4217 /* DictionaryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482D26FFA7DC007E4217 /* DictionaryViewProtocol.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
 		ED4B60AA26FF7089005A1352 /* CoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609A26FF7089005A1352 /* CoordinatorFactoryProtocol.swift */; };
-		ED4B60AB26FF7089005A1352 /* MainViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609B26FF7089005A1352 /* MainViewProtocol.swift */; };
-		ED4B60AC26FF7089005A1352 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609C26FF7089005A1352 /* MainViewController.swift */; };
 		ED4B60AD26FF7089005A1352 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609D26FF7089005A1352 /* Routable.swift */; };
 		ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609E26FF7089005A1352 /* Presentable.swift */; };
-		ED4B60AF26FF7089005A1352 /* RootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609F26FF7089005A1352 /* RootFactory.swift */; };
 		ED4B60B026FF7089005A1352 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A026FF7089005A1352 /* Coordinatable.swift */; };
 		ED4B60B126FF7089005A1352 /* Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A126FF7089005A1352 /* Blocks.swift */; };
 		ED4B60B226FF7089005A1352 /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A226FF7089005A1352 /* ModulesFactory.swift */; };
 		ED4B60B326FF7089005A1352 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A326FF7089005A1352 /* Router.swift */; };
-		ED4B60B426FF7089005A1352 /* RootCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A426FF7089005A1352 /* RootCoordinatorOutput.swift */; };
 		ED4B60B526FF7089005A1352 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A526FF7089005A1352 /* BaseCoordinator.swift */; };
-		ED4B60B626FF7089005A1352 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A626FF7089005A1352 /* RootCoordinator.swift */; };
 		ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A726FF7089005A1352 /* CoordinatorFactory.swift */; };
 		ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60A826FF7089005A1352 /* BaseViewProtocol.swift */; };
 		ED4B60C026FF7229005A1352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B60BF26FF7229005A1352 /* AppDelegate.swift */; };
@@ -48,29 +59,48 @@
 		ED9AB74626FF7B63001734B3 /* TranslateLauncherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73E26FF7B63001734B3 /* TranslateLauncherInteractor.swift */; };
 		ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB73F26FF7B63001734B3 /* TranslateLauncherViewProtocol.swift */; };
 		ED9AB77126FF7CCC001734B3 /* book-with-bookmark.json in Resources */ = {isa = PBXBuildFile; fileRef = ED9AB77026FF7CCC001734B3 /* book-with-bookmark.json */; };
+		ED9AB78326FFA203001734B3 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB77B26FFA203001734B3 /* TabBarCoordinator.swift */; };
+		ED9AB78426FFA203001734B3 /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB77C26FFA203001734B3 /* TabBarFactory.swift */; };
+		ED9AB78526FFA203001734B3 /* TabBarCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB77D26FFA203001734B3 /* TabBarCoordinatorOutput.swift */; };
+		ED9AB78626FFA203001734B3 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB77E26FFA203001734B3 /* TabBarPresenter.swift */; };
+		ED9AB78726FFA203001734B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB77F26FFA203001734B3 /* TabBarViewController.swift */; };
+		ED9AB78826FFA203001734B3 /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB78026FFA203001734B3 /* TabBarAssembly.swift */; };
+		ED9AB78926FFA203001734B3 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB78126FFA203001734B3 /* TabBarInteractor.swift */; };
+		ED9AB78A26FFA203001734B3 /* TabBarViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB78226FFA203001734B3 /* TabBarViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		471FF03AEA1743760A8B2D05 /* Pods-Translates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translates.debug.xcconfig"; path = "Target Support Files/Pods-Translates/Pods-Translates.debug.xcconfig"; sourceTree = "<group>"; };
 		B46451A0E03E9661C246A6E7 /* Pods-Translates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translates.release.xcconfig"; path = "Target Support Files/Pods-Translates/Pods-Translates.release.xcconfig"; sourceTree = "<group>"; };
+		ED10480D26FFA4BF007E4217 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		ED10480E26FFA4BF007E4217 /* SearchFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactory.swift; sourceTree = "<group>"; };
+		ED10480F26FFA4BF007E4217 /* SearchCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinatorOutput.swift; sourceTree = "<group>"; };
+		ED10481026FFA4BF007E4217 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		ED10481126FFA4BF007E4217 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		ED10481226FFA4BF007E4217 /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
+		ED10481326FFA4BF007E4217 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		ED10481426FFA4BF007E4217 /* SearchViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewProtocol.swift; sourceTree = "<group>"; };
+		ED10482626FFA7DC007E4217 /* DictionaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCoordinator.swift; sourceTree = "<group>"; };
+		ED10482726FFA7DC007E4217 /* DictionaryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryFactory.swift; sourceTree = "<group>"; };
+		ED10482826FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCoordinatorOutput.swift; sourceTree = "<group>"; };
+		ED10482926FFA7DC007E4217 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
+		ED10482A26FFA7DC007E4217 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		ED10482B26FFA7DC007E4217 /* DictionaryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembly.swift; sourceTree = "<group>"; };
+		ED10482C26FFA7DC007E4217 /* DictionaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryInteractor.swift; sourceTree = "<group>"; };
+		ED10482D26FFA7DC007E4217 /* DictionaryViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewProtocol.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED4B607626FF4DFE005A1352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED4B609926FF7089005A1352 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		ED4B609A26FF7089005A1352 /* CoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
-		ED4B609B26FF7089005A1352 /* MainViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewProtocol.swift; sourceTree = "<group>"; };
-		ED4B609C26FF7089005A1352 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED4B609D26FF7089005A1352 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		ED4B609E26FF7089005A1352 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
-		ED4B609F26FF7089005A1352 /* RootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFactory.swift; sourceTree = "<group>"; };
 		ED4B60A026FF7089005A1352 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		ED4B60A126FF7089005A1352 /* Blocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocks.swift; sourceTree = "<group>"; };
 		ED4B60A226FF7089005A1352 /* ModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
 		ED4B60A326FF7089005A1352 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		ED4B60A426FF7089005A1352 /* RootCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorOutput.swift; sourceTree = "<group>"; };
 		ED4B60A526FF7089005A1352 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		ED4B60A626FF7089005A1352 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		ED4B60A726FF7089005A1352 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		ED4B60A826FF7089005A1352 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		ED4B60BF26FF7229005A1352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +125,14 @@
 		ED9AB73E26FF7B63001734B3 /* TranslateLauncherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherInteractor.swift; sourceTree = "<group>"; };
 		ED9AB73F26FF7B63001734B3 /* TranslateLauncherViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLauncherViewProtocol.swift; sourceTree = "<group>"; };
 		ED9AB77026FF7CCC001734B3 /* book-with-bookmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "book-with-bookmark.json"; sourceTree = "<group>"; };
+		ED9AB77B26FFA203001734B3 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		ED9AB77C26FFA203001734B3 /* TabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
+		ED9AB77D26FFA203001734B3 /* TabBarCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorOutput.swift; sourceTree = "<group>"; };
+		ED9AB77E26FFA203001734B3 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		ED9AB77F26FFA203001734B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		ED9AB78026FFA203001734B3 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
+		ED9AB78126FFA203001734B3 /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		ED9AB78226FFA203001734B3 /* TabBarViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewProtocol.swift; sourceTree = "<group>"; };
 		FF01BA57E561B542872D3E17 /* Pods_Translates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Translates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +163,40 @@
 				FF01BA57E561B542872D3E17 /* Pods_Translates.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED10481F26FFA4C7007E4217 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ED10481026FFA4BF007E4217 /* SearchPresenter.swift */,
+				ED10481126FFA4BF007E4217 /* SearchViewController.swift */,
+				ED10481226FFA4BF007E4217 /* SearchAssembly.swift */,
+				ED10481326FFA4BF007E4217 /* SearchInteractor.swift */,
+				ED10481426FFA4BF007E4217 /* SearchViewProtocol.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		ED10482426FFA792007E4217 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				ED10482626FFA7DC007E4217 /* DictionaryCoordinator.swift */,
+				ED10482826FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift */,
+				ED10482526FFA7B5007E4217 /* Dictionary */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		ED10482526FFA7B5007E4217 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				ED10482926FFA7DC007E4217 /* DictionaryPresenter.swift */,
+				ED10482A26FFA7DC007E4217 /* DictionaryViewController.swift */,
+				ED10482B26FFA7DC007E4217 /* DictionaryAssembly.swift */,
+				ED10482C26FFA7DC007E4217 /* DictionaryInteractor.swift */,
+				ED10482D26FFA7DC007E4217 /* DictionaryViewProtocol.swift */,
+			);
+			path = Dictionary;
 			sourceTree = "<group>";
 		};
 		ED4B605F26FF4DFA005A1352 = {
@@ -258,9 +330,11 @@
 		ED4B609226FF6F5D005A1352 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B609F26FF7089005A1352 /* RootFactory.swift */,
 				ED4B60A226FF7089005A1352 /* ModulesFactory.swift */,
 				ED9AB73926FF7B63001734B3 /* TranslateLauncherFactory.swift */,
+				ED9AB77C26FFA203001734B3 /* TabBarFactory.swift */,
+				ED10480E26FFA4BF007E4217 /* SearchFactory.swift */,
+				ED10482726FFA7DC007E4217 /* DictionaryFactory.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -271,7 +345,9 @@
 				ED4B609926FF7089005A1352 /* AppCoordinator.swift */,
 				ED4B609426FF6F8E005A1352 /* Base */,
 				ED9AB73726FF7B30001734B3 /* TranslateLauncher */,
-				ED4B609826FF7066005A1352 /* TranslatesCoordinator */,
+				ED9AB77A26FFA1D7001734B3 /* TabBar */,
+				ED4B609826FF7066005A1352 /* Search */,
+				ED10482426FFA792007E4217 /* Dictionary */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -294,23 +370,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		ED4B609826FF7066005A1352 /* TranslatesCoordinator */ = {
+		ED4B609826FF7066005A1352 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B60A626FF7089005A1352 /* RootCoordinator.swift */,
-				ED4B60A426FF7089005A1352 /* RootCoordinatorOutput.swift */,
-				ED4B60BD26FF7204005A1352 /* Translates */,
+				ED10480D26FFA4BF007E4217 /* SearchCoordinator.swift */,
+				ED10480F26FFA4BF007E4217 /* SearchCoordinatorOutput.swift */,
+				ED10481F26FFA4C7007E4217 /* Search */,
 			);
-			path = TranslatesCoordinator;
-			sourceTree = "<group>";
-		};
-		ED4B60BD26FF7204005A1352 /* Translates */ = {
-			isa = PBXGroup;
-			children = (
-				ED4B609B26FF7089005A1352 /* MainViewProtocol.swift */,
-				ED4B609C26FF7089005A1352 /* MainViewController.swift */,
-			);
-			path = Translates;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		ED4B60E026FF7354005A1352 /* UIKit */ = {
@@ -375,6 +442,28 @@
 				ED9AB77026FF7CCC001734B3 /* book-with-bookmark.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		ED9AB77A26FFA1D7001734B3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ED9AB77B26FFA203001734B3 /* TabBarCoordinator.swift */,
+				ED9AB77D26FFA203001734B3 /* TabBarCoordinatorOutput.swift */,
+				ED9AB78C26FFA20A001734B3 /* TabBar */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		ED9AB78C26FFA20A001734B3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ED9AB77E26FFA203001734B3 /* TabBarPresenter.swift */,
+				ED9AB77F26FFA203001734B3 /* TabBarViewController.swift */,
+				ED9AB78026FFA203001734B3 /* TabBarAssembly.swift */,
+				ED9AB78126FFA203001734B3 /* TabBarInteractor.swift */,
+				ED9AB78226FFA203001734B3 /* TabBarViewProtocol.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,24 +582,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4B60EB26FF73A0005A1352 /* UIViewController+Extension.swift in Sources */,
-				ED4B60AF26FF7089005A1352 /* RootFactory.swift in Sources */,
+				ED9AB78826FFA203001734B3 /* TabBarAssembly.swift in Sources */,
+				ED9AB78326FFA203001734B3 /* TabBarCoordinator.swift in Sources */,
 				ED4B60B226FF7089005A1352 /* ModulesFactory.swift in Sources */,
 				ED4B60AA26FF7089005A1352 /* CoordinatorFactoryProtocol.swift in Sources */,
+				ED10483026FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift in Sources */,
 				ED4B60AD26FF7089005A1352 /* Routable.swift in Sources */,
+				ED9AB78426FFA203001734B3 /* TabBarFactory.swift in Sources */,
 				ED4B60DA26FF72B9005A1352 /* BasePresenterOutput.swift in Sources */,
 				ED9AB74626FF7B63001734B3 /* TranslateLauncherInteractor.swift in Sources */,
+				ED10483426FFA7DC007E4217 /* DictionaryInteractor.swift in Sources */,
 				ED9AB74326FF7B63001734B3 /* TranslateLauncherPresenter.swift in Sources */,
 				ED4B60B326FF7089005A1352 /* Router.swift in Sources */,
 				ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */,
 				ED4B60ED26FF73A0005A1352 /* String+Extension.swift in Sources */,
-				ED4B60B626FF7089005A1352 /* RootCoordinator.swift in Sources */,
 				ED4B60B026FF7089005A1352 /* Coordinatable.swift in Sources */,
-				ED4B60AB26FF7089005A1352 /* MainViewProtocol.swift in Sources */,
+				ED9AB78A26FFA203001734B3 /* TabBarViewProtocol.swift in Sources */,
 				ED4B60B126FF7089005A1352 /* Blocks.swift in Sources */,
-				ED4B60B426FF7089005A1352 /* RootCoordinatorOutput.swift in Sources */,
+				ED9AB78526FFA203001734B3 /* TabBarCoordinatorOutput.swift in Sources */,
 				ED4B60C026FF7229005A1352 /* AppDelegate.swift in Sources */,
+				ED9AB78626FFA203001734B3 /* TabBarPresenter.swift in Sources */,
 				ED4B60DD26FF72B9005A1352 /* Colors.swift in Sources */,
+				ED10481A26FFA4BF007E4217 /* SearchAssembly.swift in Sources */,
 				ED4B60D826FF72B9005A1352 /* UIView+Extensions.swift in Sources */,
+				ED10481826FFA4BF007E4217 /* SearchPresenter.swift in Sources */,
+				ED10481B26FFA4BF007E4217 /* SearchInteractor.swift in Sources */,
 				ED9AB74126FF7B63001734B3 /* TranslateLauncherFactory.swift in Sources */,
 				ED4B60DE26FF72B9005A1352 /* BaseView.swift in Sources */,
 				ED4B60B526FF7089005A1352 /* BaseCoordinator.swift in Sources */,
@@ -518,15 +614,27 @@
 				ED9AB74526FF7B63001734B3 /* TranslateLauncherAssembly.swift in Sources */,
 				ED9AB74426FF7B63001734B3 /* TranslateLauncherViewController.swift in Sources */,
 				ED4B60DB26FF72B9005A1352 /* UINavigatoionBar+Extension.swift in Sources */,
-				ED4B60AC26FF7089005A1352 /* MainViewController.swift in Sources */,
+				ED10481926FFA4BF007E4217 /* SearchViewController.swift in Sources */,
+				ED10482E26FFA7DC007E4217 /* DictionaryCoordinator.swift in Sources */,
+				ED10483226FFA7DC007E4217 /* DictionaryViewController.swift in Sources */,
+				ED9AB78926FFA203001734B3 /* TabBarInteractor.swift in Sources */,
+				ED9AB78726FFA203001734B3 /* TabBarViewController.swift in Sources */,
 				ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */,
 				ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */,
+				ED10483126FFA7DC007E4217 /* DictionaryPresenter.swift in Sources */,
 				ED4B60E926FF73A0005A1352 /* BaseViewController.swift in Sources */,
+				ED10483326FFA7DC007E4217 /* DictionaryAssembly.swift in Sources */,
+				ED10481C26FFA4BF007E4217 /* SearchViewProtocol.swift in Sources */,
+				ED10482F26FFA7DC007E4217 /* DictionaryFactory.swift in Sources */,
+				ED10481726FFA4BF007E4217 /* SearchCoordinatorOutput.swift in Sources */,
 				ED4B60DC26FF72B9005A1352 /* BaseNavigationController.swift in Sources */,
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
+				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
 				ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */,
+				ED10481626FFA4BF007E4217 /* SearchFactory.swift in Sources */,
+				ED10483526FFA7DC007E4217 /* DictionaryViewProtocol.swift in Sources */,
 				ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

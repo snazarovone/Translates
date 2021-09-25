@@ -18,13 +18,21 @@ final class CoordinatorFactory {
 
 extension CoordinatorFactory: CoordinatorFactoryProtocol {
     
+    func makeDictionaryCoordinator(router: Routable) -> Coordinatable & DictionaryCoordinatorOutput {
+        DictionaryCoordinator(with: modulesFactory, router: router)
+    }
+    
+    func makeTabBarCoordinator(router: Routable, coordinatorFactory: CoordinatorFactoryProtocol) -> Coordinatable & TabBarCoordinatorOutput {
+        TabBarCoordinator(router: router, coordinatorFactory: coordinatorFactory)
+    }
+    
+    func makeSearchCoordinator(router: Routable) -> Coordinatable & SearchCoordinatorOutput {
+        SearchCoordinator(with: modulesFactory, router: router)
+    }
+    
     func makeTranslateLauncher(router: Routable)
     -> Coordinatable & TranslateLauncherCoordinatorOutput {
         TranslateLauncherCoordinator(with: modulesFactory, router: router)
-    }
-    
-    func makeRootCoordinator(router: Routable) -> Coordinatable & RootCoordinatorOutput {
-        RootCoordinator(with: modulesFactory, router: router)
     }
 }
 

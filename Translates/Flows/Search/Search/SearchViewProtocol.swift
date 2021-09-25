@@ -1,14 +1,14 @@
 //
-//  MainViewProtocol.swift
+//  SearchViewProtocol.swift
 //  Translates
 //
 //  Created by Sergey Nazarov on 25.09.2021.
 //  
 //
 
-import Foundation
+import UIKit
 
-protocol MainViewProtocol: BaseViewProtocol {
+protocol SearchViewProtocol: BaseViewProtocol {
     
     var onCompletion: CompletionBlock? { get set }
     
