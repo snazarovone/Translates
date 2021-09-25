@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ED4B606C26FF4DFA005A1352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B606B26FF4DFA005A1352 /* AppDelegate.swift */; };
 		ED4B606E26FF4DFA005A1352 /* TranslatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B606D26FF4DFA005A1352 /* TranslatesViewController.swift */; };
-		ED4B607026FF4DFA005A1352 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B606F26FF4DFA005A1352 /* ContentView.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B606B26FF4DFA005A1352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4B606D26FF4DFA005A1352 /* TranslatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatesViewController.swift; sourceTree = "<group>"; };
-		ED4B606F26FF4DFA005A1352 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED4B607626FF4DFE005A1352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			children = (
 				ED4B606B26FF4DFA005A1352 /* AppDelegate.swift */,
 				ED4B606D26FF4DFA005A1352 /* TranslatesViewController.swift */,
-				ED4B606F26FF4DFA005A1352 /* ContentView.swift */,
 				ED4B607126FF4DFE005A1352 /* Assets.xcassets */,
 				ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */,
 				ED4B607626FF4DFE005A1352 /* Info.plist */,
@@ -135,7 +132,6 @@
 			files = (
 				ED4B606C26FF4DFA005A1352 /* AppDelegate.swift in Sources */,
 				ED4B606E26FF4DFA005A1352 /* TranslatesViewController.swift in Sources */,
-				ED4B607026FF4DFA005A1352 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
