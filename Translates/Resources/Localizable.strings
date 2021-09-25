@@ -18,5 +18,6 @@
 "tab_dictionary"                = "Словарь";
 
 /* Screens */
+"search_placeholder"            = "Поиск";
 
 /* View Controllers Name */

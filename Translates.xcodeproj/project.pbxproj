@@ -24,6 +24,9 @@
 		ED10483326FFA7DC007E4217 /* DictionaryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482B26FFA7DC007E4217 /* DictionaryAssembly.swift */; };
 		ED10483426FFA7DC007E4217 /* DictionaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482C26FFA7DC007E4217 /* DictionaryInteractor.swift */; };
 		ED10483526FFA7DC007E4217 /* DictionaryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10482D26FFA7DC007E4217 /* DictionaryViewProtocol.swift */; };
+		ED10483D26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10483C26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift */; };
+		ED10484226FFADBE007E4217 /* SearchBarTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484126FFADBE007E4217 /* SearchBarTranslate.swift */; };
+		ED10484526FFAE83007E4217 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -88,6 +91,9 @@
 		ED10482B26FFA7DC007E4217 /* DictionaryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembly.swift; sourceTree = "<group>"; };
 		ED10482C26FFA7DC007E4217 /* DictionaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryInteractor.swift; sourceTree = "<group>"; };
 		ED10482D26FFA7DC007E4217 /* DictionaryViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewProtocol.swift; sourceTree = "<group>"; };
+		ED10483C26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationsProtocol.swift; sourceTree = "<group>"; };
+		ED10484126FFADBE007E4217 /* SearchBarTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTranslate.swift; sourceTree = "<group>"; };
+		ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -199,6 +205,21 @@
 			path = Dictionary;
 			sourceTree = "<group>";
 		};
+		ED10483B26FFABD6007E4217 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		ED10484026FFADA1007E4217 /* Search Bar */ = {
+			isa = PBXGroup;
+			children = (
+				ED10484126FFADBE007E4217 /* SearchBarTranslate.swift */,
+			);
+			path = "Search Bar";
+			sourceTree = "<group>";
+		};
 		ED4B605F26FF4DFA005A1352 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +317,7 @@
 				ED4B60D426FF72B9005A1352 /* UINavigatoionBar+Extension.swift */,
 				ED4B60E626FF73A0005A1352 /* UIViewController+Extension.swift */,
 				ED4B60E826FF73A0005A1352 /* String+Extension.swift */,
+				ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +364,7 @@
 		ED4B609326FF6F6D005A1352 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				ED10483B26FFABD6007E4217 /* New Group */,
 				ED4B609926FF7089005A1352 /* AppCoordinator.swift */,
 				ED4B609426FF6F8E005A1352 /* Base */,
 				ED9AB73726FF7B30001734B3 /* TranslateLauncher */,
@@ -365,6 +388,7 @@
 		ED4B609526FF6F97005A1352 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				ED10483C26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift */,
 				ED4B60D326FF72B9005A1352 /* BasePresenterOutput.swift */,
 			);
 			path = Protocols;
@@ -385,6 +409,7 @@
 			children = (
 				ED4B60E226FF7364005A1352 /* Base */,
 				ED4B60E126FF735D005A1352 /* NavigationBar */,
+				ED10484026FFADA1007E4217 /* Search Bar */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -585,6 +610,7 @@
 				ED9AB78826FFA203001734B3 /* TabBarAssembly.swift in Sources */,
 				ED9AB78326FFA203001734B3 /* TabBarCoordinator.swift in Sources */,
 				ED4B60B226FF7089005A1352 /* ModulesFactory.swift in Sources */,
+				ED10484226FFADBE007E4217 /* SearchBarTranslate.swift in Sources */,
 				ED4B60AA26FF7089005A1352 /* CoordinatorFactoryProtocol.swift in Sources */,
 				ED10483026FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift in Sources */,
 				ED4B60AD26FF7089005A1352 /* Routable.swift in Sources */,
@@ -632,8 +658,10 @@
 				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
+				ED10483D26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift in Sources */,
 				ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */,
 				ED10481626FFA4BF007E4217 /* SearchFactory.swift in Sources */,
+				ED10484526FFAE83007E4217 /* UISearchBar+Extension.swift in Sources */,
 				ED10483526FFA7DC007E4217 /* DictionaryViewProtocol.swift in Sources */,
 				ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */,
 			);
