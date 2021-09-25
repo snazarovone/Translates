@@ -54,12 +54,11 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     override func initListeners() {
         searchBar.searchWithText = { [weak self] text in
             // Выполнить запрос поиска по кнопке поиск
-            print(text)
+            self?.presenter?.didEnteredSearch(with: text)
         }
         
         searchBar.textDidChange = { [weak self] text in
-            // текс
-            print(text)
+            self?.presenter?.didEnteredSearch(with: text)
         }
         
         searchBar.didTapDeleteKey = { [weak self] in

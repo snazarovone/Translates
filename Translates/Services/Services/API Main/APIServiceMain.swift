@@ -1,5 +1,5 @@
 //
-//  APIServiceAPIMain.swift
+//  APIServiceMain.swift
 //  Translates
 //
 //  Created by Sergey Nazarov on 25.09.2021.
@@ -9,7 +9,7 @@
 import Moya
 import Alamofire
 
-class APIServiceAPIMain: BaseAPIService, APIServiceProtocolAPIMain {
+class APIServiceMain: BaseAPIService, APIServiceProtocolMain {
 
     private let provider: MoyaProvider<APITargetMain> = {
         let session = Session(interceptor: BaseRequestRetrier())
@@ -34,7 +34,7 @@ class APIServiceAPIMain: BaseAPIService, APIServiceProtocolAPIMain {
     /// You can search in English or translation.
     func performSearchWordRequest(
         _ request: SearchRequest,
-        completion: ((Result<APIEmptyData, Error>) -> Void)?) {
+        completion: ((Result<SearchResponseData, Error>) -> Void)?) {
         
         provider.session.cancelAllRequests(
             completingOnQueue: .main) { [unowned self] in

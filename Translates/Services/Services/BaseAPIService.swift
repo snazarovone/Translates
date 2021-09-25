@@ -44,26 +44,14 @@ class BaseAPIService: BaseAPIServiceProtocol {
     }
     
     private func mapResponse<T: Decodable>(_ response: Response) -> Swift.Result<T, Error> {
-        
+
         do {
-            let mappedErrorResponse = try response.map(APIErrorResponse.self)
-            
-            if let error = mappedErrorResponse.error {
-                let errorUserInfo = [NSLocalizedDescriptionKey: error.message ?? ""]
+            guard response.statusCode >= 200 && response.statusCode <= 300 else {
+                let info = extractErrorMessage(from: response)
                 let error = NSError(
                     domain: "RestAPIServiceError",
                     code: response.statusCode,
-                    userInfo: errorUserInfo
-                )
-                print(error)
-                return .failure(error)
-            }
-            
-            guard  response.statusCode >= 200 && response.statusCode <= 300 else {
-                let error = NSError(
-                    domain: "RestAPIServiceError",
-                    code: response.statusCode,
-                    userInfo: [:]
+                    userInfo: ["errorModel": info ?? ""]
                 )
                 print(error)
                 return .failure(error)
@@ -95,8 +83,10 @@ class BaseAPIService: BaseAPIServiceProtocol {
         
     }
     
-    private func extractErrorMessage(from response: APIErrorResponse) -> String {
-        ""
+    private func extractErrorMessage(from response: Response) -> APIErrorResponse? {
+        let mappedResponse = try? response.map(APIErrorResponse.self)
+        return mappedResponse
     }
+
 
 }

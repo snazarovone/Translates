@@ -9,7 +9,16 @@
 import UIKit
 
 protocol SearchPresenterInput: AnyObject {
-    // TODO: presentation input methods
+    /**
+     Был введен текст поиска
+     - Parameter text - Введеный текст
+     */
+    func didEnteredSearch(with text: String?)
+    
+    /**
+     SearchBar был отчищен
+     */
+    func didRemovedTextFromSearch()
 }
 
 protocol SearchPresenterOutput: AnyObject {
@@ -31,6 +40,14 @@ final class SearchPresenter {
 // MARK: - SearchPresenterInput
 
 extension SearchPresenter: SearchPresenterInput {
-    // TODO: implement input presentation methods
-
+    
+    func didEnteredSearch(with text: String?) {
+        interactor?.searchText(
+            with: SearchRequest(search: text ?? ""),
+            is: false
+        )
+    }
+    
+    func didRemovedTextFromSearch() {
+    }
 }
