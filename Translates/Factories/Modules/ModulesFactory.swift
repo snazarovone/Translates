@@ -11,8 +11,16 @@ final class ModulesFactory:
     TranslateLauncherFactory,
     TabBarFactory,
     SearchFactory,
-    DictionaryFactory
+    DictionaryFactory,
+    DetailWordFactory
 {
+    func makeDetailWordView(with input: DetailWordPresenter.Input)
+    -> DetailWordViewProtocol {
+        let view = DetailWordViewController()
+        DetailWordAssembly.assembly(with: view, by: input)
+        return view
+    }
+    
     func makeDictionaryView() -> DictionaryViewProtocol {
         let view = DictionaryViewController()
         DictionaryAssembly.assembly(with: view)

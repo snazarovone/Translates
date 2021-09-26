@@ -20,13 +20,21 @@ protocol SearchPresenterInput: AnyObject {
      */
     func didRemovedTextFromSearch()
     
+    /// Проверка существования страниц
     func isReachedEndOfItems() -> Bool
+    /// Будет показана последняя ячейка
     func willDisplayLastCell()
+    
+    /// Было выбрано слово
+    func didSelectWord(with meaning: MeaningsModel)
 }
 
 protocol SearchPresenterOutput: AnyObject {
     
     var presenter: SearchPresenterInput? { get set }
+    
+    /// Показать полную информацию о  слове
+    var onDetailWord: DetailWordBlock? { get set }
     
     func prepareData(with data: [SearchResponseModel])
     func loadingData(_ animating: Bool)
@@ -98,5 +106,11 @@ extension SearchPresenter: SearchPresenterInput {
         } else {
             output?.loadingData(false)
         }
+    }
+    
+    func didSelectWord(with meaning: MeaningsModel) {
+        output?.onDetailWord?(
+            DetailWordPresenter.Input(meaning: meaning)
+        )
     }
 }

@@ -37,7 +37,7 @@ class WordTableViewCell: UITableViewCell, Configurable {
         
         DownloadImgManager.setImage(
             with: URL(
-                string: "http://\(model.urlImg ?? "")"
+                string: "https:\(model.urlImg ?? "")"
             ),
             imageView: logoImg
         )

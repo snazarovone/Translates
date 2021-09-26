@@ -18,16 +18,26 @@ final class CoordinatorFactory {
 
 extension CoordinatorFactory: CoordinatorFactoryProtocol {
     
-    func makeDictionaryCoordinator(router: Routable) -> Coordinatable & DictionaryCoordinatorOutput {
-        DictionaryCoordinator(with: modulesFactory, router: router)
+    func makeDetailWordCoordinator(router: Routable, originRouter: Routable)
+    -> Coordinatable & DetailWordCoordinatorOutput {
+        DetailWordCoordinator(with: modulesFactory, router: router, originRouter: originRouter)
+    }
+    
+    func makeDictionaryCoordinator(router: Routable,
+                                   coordinatorFactory: CoordinatorFactoryProtocol) -> Coordinatable & DictionaryCoordinatorOutput {
+        DictionaryCoordinator(
+            with: modulesFactory,
+            router: router,
+            coordinatorFactory: coordinatorFactory
+        )
     }
     
     func makeTabBarCoordinator(router: Routable, coordinatorFactory: CoordinatorFactoryProtocol) -> Coordinatable & TabBarCoordinatorOutput {
         TabBarCoordinator(router: router, coordinatorFactory: coordinatorFactory)
     }
     
-    func makeSearchCoordinator(router: Routable) -> Coordinatable & SearchCoordinatorOutput {
-        SearchCoordinator(with: modulesFactory, router: router)
+    func makeSearchCoordinator(router: Routable, coordinatorFactory: CoordinatorFactoryProtocol) -> Coordinatable & SearchCoordinatorOutput {
+        SearchCoordinator(with: modulesFactory, router: router, coordinatorFactory: coordinatorFactory)
     }
     
     func makeTranslateLauncher(router: Routable)

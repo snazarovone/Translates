@@ -14,10 +14,14 @@ final class SearchCoordinator: BaseCoordinator, SearchCoordinatorOutput {
     
     private let factory: SearchFactory
     private let router: Routable
+    private let coordinatorFactory: CoordinatorFactoryProtocol
     
-    init(with factory: SearchFactory, router: Routable) {
+    init(with factory: SearchFactory,
+         router: Routable,
+         coordinatorFactory: CoordinatorFactoryProtocol) {
         self.factory = factory
         self.router = router
+        self.coordinatorFactory = coordinatorFactory
     }
 }
 
@@ -36,7 +40,27 @@ private extension SearchCoordinator {
     func performFlow() {
         let view = factory.makeSearchView()
         
+        view.onDetailWord = { [weak self] input in
+            self?.performDetailWord(with: input)
+        }
+        
         router.setRootModule(view, hideNavigationBar: false, rootAnimated: true)
+    }
+    
+    func performDetailWord(with input: DetailWordPresenter.Input) {
+        let navController = BaseNavigationController()
+       
+        let coordinator = coordinatorFactory.makeDetailWordCoordinator(
+            router: Router(rootController: navController),
+            originRouter: router
+        )
+        
+        coordinator.finishFlow = { [weak self] in
+            self?.removeDependency(coordinator)
+        }
+        
+        addDependency(coordinator)
+        (coordinator as? DetailWordCoordinator)?.start(with: input)
     }
     
 }

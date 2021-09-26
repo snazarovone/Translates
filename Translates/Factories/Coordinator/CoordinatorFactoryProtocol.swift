@@ -10,9 +10,14 @@ import UIKit
 
 protocol CoordinatorFactoryProtocol {
     
-    func makeDictionaryCoordinator(router: Routable) -> Coordinatable & DictionaryCoordinatorOutput
+    func makeDetailWordCoordinator(router: Routable, originRouter: Routable)
+    -> Coordinatable & DetailWordCoordinatorOutput
     
-    func makeSearchCoordinator(router: Routable) -> Coordinatable & SearchCoordinatorOutput
+    func makeDictionaryCoordinator(router: Routable,
+                                   coordinatorFactory: CoordinatorFactoryProtocol) -> Coordinatable & DictionaryCoordinatorOutput
+    
+    func makeSearchCoordinator(router: Routable, coordinatorFactory: CoordinatorFactoryProtocol)
+    -> Coordinatable & SearchCoordinatorOutput
     
     func makeTranslateLauncher(router: Routable) -> Coordinatable & TranslateLauncherCoordinatorOutput
     

@@ -16,6 +16,7 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     var presenter: SearchPresenterInput?
     
     var onCompletion: CompletionBlock?
+    var onDetailWord: DetailWordBlock?
     
     private let searchBar = SearchBarTranslate()
     private let placeholderView = SearchPlaceholder()

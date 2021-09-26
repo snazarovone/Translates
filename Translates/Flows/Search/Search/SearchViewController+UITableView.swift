@@ -38,4 +38,12 @@ extension SearchViewController: UITableViewDelegate {
             presenter?.willDisplayLastCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = dataSource?.sections[indexPath.section].items[indexPath.row]
+                as? WordCellModel else {
+            return
+        }
+        presenter?.didSelectWord(with: model.meaning)
+    }
 }

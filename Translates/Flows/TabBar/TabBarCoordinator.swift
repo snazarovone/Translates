@@ -68,14 +68,16 @@ final class TabBarCoordinator: BaseCoordinator, TabBarCoordinatorOutput {
         case .search:
             let coordinator = SearchCoordinator(
                 with: modulesFactory,
-                router: router
+                router: router,
+                coordinatorFactory: coordinatorFactory
             )
             coordinator.start()
             addDependency(coordinator)
         case .dictionary:
             let coordinator = DictionaryCoordinator(
                 with: modulesFactory,
-                router: router
+                router: router,
+                coordinatorFactory: coordinatorFactory
             )
             coordinator.start()
             addDependency(coordinator)

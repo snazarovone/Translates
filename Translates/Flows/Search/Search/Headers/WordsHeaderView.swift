@@ -54,7 +54,6 @@ class WordsHeaderView: UITableViewHeaderFooterView {
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        print("tap")
         model?.didCollapsed()
     }
 }

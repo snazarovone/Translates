@@ -14,10 +14,14 @@ final class DictionaryCoordinator: BaseCoordinator, DictionaryCoordinatorOutput 
     
     private let factory: DictionaryFactory
     private let router: Routable
+    private let coordinatorFactory: CoordinatorFactoryProtocol
     
-    init(with factory: DictionaryFactory, router: Routable) {
+    init(with factory: DictionaryFactory,
+         router: Routable,
+         coordinatorFactory: CoordinatorFactoryProtocol) {
         self.factory = factory
         self.router = router
+        self.coordinatorFactory = coordinatorFactory
     }
 }
 
@@ -39,4 +43,19 @@ private extension DictionaryCoordinator {
         router.setRootModule(view, hideNavigationBar: false, rootAnimated: true)
     }
     
+    func performDetailWord(with input: DetailWordPresenter.Input) {
+        let navController = BaseNavigationController()
+       
+        let coordinator = coordinatorFactory.makeDetailWordCoordinator(
+            router: Router(rootController: navController),
+            originRouter: router
+        )
+        
+        coordinator.finishFlow = { [weak self] in
+            self?.removeDependency(coordinator)
+        }
+        
+        addDependency(coordinator)
+        (coordinator as? DetailWordCoordinator)?.start(with: input)
+    }
 }

@@ -91,7 +91,7 @@ class WordsHolder: UIView {
         
         if let imgUrl = imgUrl {
             DownloadImgManager.setImage(
-                with: URL(string: "http:\(imgUrl)"),
+                with: URL(string: "https:\(imgUrl)"),
                 imageView: img
             )
         } else {
