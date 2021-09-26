@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TranslationModel: Decodable {
+struct TranslationModel: Codable {
     let text: String?
     let note: String?
 }

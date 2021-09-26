@@ -49,9 +49,6 @@ class DetailWordViewController: BaseViewController, DetailWordAssemblable {
         tableView.delegate = self
         
         presenter?.onStart()
-        dictAction.setStyle(
-            with: .add(title: "add_dictionary".localized)
-        )
     }
     
     override func initConstraints() {
@@ -69,7 +66,7 @@ class DetailWordViewController: BaseViewController, DetailWordAssemblable {
     
     override func initListeners() {
         dictAction.touchUp = { [weak self] _ in
-            
+            self?.presenter?.dictionaryAction()
         }
     }
 
@@ -99,5 +96,9 @@ extension DetailWordViewController {
                 self.tableView.stopLoading()
             }
         }
+    }
+    
+    func updateStyleAction(with type: StyleButton) {
+        dictAction.setStyle(with: type)
     }
 }

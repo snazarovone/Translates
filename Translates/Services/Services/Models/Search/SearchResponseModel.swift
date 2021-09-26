@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchResponseModel: Decodable {
+struct SearchResponseModel: Codable {
     let id: Int
     let text: String?
     let meanings: [MeaningsModel]

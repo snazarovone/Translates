@@ -9,6 +9,9 @@ def available_pods
   # Networking
   pod 'Moya'
   pod 'Kingfisher'
+  
+  # Database
+   pod 'RealmSwift'
 
   # Utilities
   pod 'SwiftLint'

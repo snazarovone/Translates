@@ -98,6 +98,10 @@
 		ED10494327011879007E4217 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10494227011879007E4217 /* ActionButton.swift */; };
 		ED104947270118C4007E4217 /* TranslateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104946270118C4007E4217 /* TranslateButton.swift */; };
 		ED10494A27011977007E4217 /* StyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10494927011977007E4217 /* StyleButton.swift */; };
+		ED10495027011E13007E4217 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10494F27011E13007E4217 /* RealmService.swift */; };
+		ED10495F27011FEC007E4217 /* RealmServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10495E27011FEC007E4217 /* RealmServiceProtocol.swift */; };
+		ED1049622701221F007E4217 /* MeaningsModelRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1049612701221F007E4217 /* MeaningsModelRM.swift */; };
+		ED104965270127E7007E4217 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104964270127E7007E4217 /* Bundle+Extensions.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -236,6 +240,10 @@
 		ED10494227011879007E4217 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		ED104946270118C4007E4217 /* TranslateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateButton.swift; sourceTree = "<group>"; };
 		ED10494927011977007E4217 /* StyleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleButton.swift; sourceTree = "<group>"; };
+		ED10494F27011E13007E4217 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		ED10495E27011FEC007E4217 /* RealmServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmServiceProtocol.swift; sourceTree = "<group>"; };
+		ED1049612701221F007E4217 /* MeaningsModelRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsModelRM.swift; sourceTree = "<group>"; };
+		ED104964270127E7007E4217 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -373,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				ED10487126FFBECF007E4217 /* Services */,
+				ED10494E27011DE5007E4217 /* RealmService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -607,6 +616,24 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		ED10494E27011DE5007E4217 /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				ED10495C27011F19007E4217 /* Models */,
+				ED10494F27011E13007E4217 /* RealmService.swift */,
+				ED10495E27011FEC007E4217 /* RealmServiceProtocol.swift */,
+			);
+			path = RealmService;
+			sourceTree = "<group>";
+		};
+		ED10495C27011F19007E4217 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED1049612701221F007E4217 /* MeaningsModelRM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ED4B605F26FF4DFA005A1352 = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +736,7 @@
 				ED10484C26FFBB33007E4217 /* Utils.swift */,
 				ED1048AD26FFD07F007E4217 /* UITableView+Extension.swift */,
 				ED1048D626FFEB38007E4217 /* Application+Extension.swift */,
+				ED104964270127E7007E4217 /* Bundle+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1047,6 +1075,7 @@
 				ED1048B526FFD07F007E4217 /* DisplayCycle.swift in Sources */,
 				ED4B60C026FF7229005A1352 /* AppDelegate.swift in Sources */,
 				ED10493F27011423007E4217 /* EmptyCellModel.swift in Sources */,
+				ED104965270127E7007E4217 /* Bundle+Extensions.swift in Sources */,
 				ED9AB78626FFA203001734B3 /* TabBarPresenter.swift in Sources */,
 				ED4B60DD26FF72B9005A1352 /* Colors.swift in Sources */,
 				ED10481A26FFA4BF007E4217 /* SearchAssembly.swift in Sources */,
@@ -1057,6 +1086,7 @@
 				ED1048BF26FFD1C5007E4217 /* SearchDataSource.swift in Sources */,
 				ED10481B26FFA4BF007E4217 /* SearchInteractor.swift in Sources */,
 				ED9AB74126FF7B63001734B3 /* TranslateLauncherFactory.swift in Sources */,
+				ED10495027011E13007E4217 /* RealmService.swift in Sources */,
 				ED4B60DE26FF72B9005A1352 /* BaseView.swift in Sources */,
 				ED10489C26FFCA6C007E4217 /* SearchResponseModel.swift in Sources */,
 				ED1048D126FFDCE4007E4217 /* WordsHolder.swift in Sources */,
@@ -1091,6 +1121,7 @@
 				ED10492B27010A6C007E4217 /* ExamplesModel.swift in Sources */,
 				ED1049092700FFCD007E4217 /* DetailWordTableViewSection.swift in Sources */,
 				ED10488F26FFC183007E4217 /* SearchRequest.swift in Sources */,
+				ED1049622701221F007E4217 /* MeaningsModelRM.swift in Sources */,
 				ED10489826FFCA4F007E4217 /* SearchResponseData.swift in Sources */,
 				ED10483126FFA7DC007E4217 /* DictionaryPresenter.swift in Sources */,
 				ED10489F26FFCAAA007E4217 /* MeaningsModel.swift in Sources */,
@@ -1108,6 +1139,7 @@
 				ED10492527010926007E4217 /* MeaningsResponseModel.swift in Sources */,
 				ED1048AF26FFD07F007E4217 /* TableViewDataSource.swift in Sources */,
 				ED1048A226FFCAEF007E4217 /* TranslationModel.swift in Sources */,
+				ED10495F27011FEC007E4217 /* RealmServiceProtocol.swift in Sources */,
 				ED10487E26FFBFAD007E4217 /* APIServiceMain.swift in Sources */,
 				ED10494A27011977007E4217 /* StyleButton.swift in Sources */,
 				ED10492127010905007E4217 /* MeaningsResponseData.swift in Sources */,

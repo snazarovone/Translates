@@ -10,8 +10,7 @@ import UIKit
 
 protocol DetailWordPresenterInput: AnyObject {
     func onStart()
-    func addToDictionary()
-    func removeFromDictionary()
+    func dictionaryAction()
 }
 
 protocol DetailWordPresenterOutput: AnyObject {
@@ -23,6 +22,7 @@ protocol DetailWordPresenterOutput: AnyObject {
                      meaning: MeaningsModel,
                      model: MeaningsResponseModel?)
     func loadingData(_ animating: Bool)
+    func updateStyleAction(with type: StyleButton)
 }
 
 final class DetailWordPresenter {
@@ -33,6 +33,9 @@ final class DetailWordPresenter {
     
     private let input: DetailWordPresenter.Input
     private var meanings: MeaningsResponseModel?
+    
+    private let realmService = RealmService.shared
+    private var styleButton = StyleButton.add(title: "add_dictionary".localized)
     
     init(_ input: DetailWordPresenter.Input) {
         self.input = input
@@ -67,12 +70,24 @@ extension DetailWordPresenter: DetailWordPresenterInput {
         output?.loadingData(true)
         prepareData()
         interactor?.meanings(with: "\(input.meaning.id)")
+        
+        if realmService.getWordModel(by: input.meaning.id) != nil {
+            styleButton = StyleButton.remove(title: "remove_dictionaty".localized)
+        }
+        output?.updateStyleAction(with: styleButton)
     }
     
-    func addToDictionary() {
-    }
-    
-    func removeFromDictionary() {
+    func dictionaryAction() {
+        switch styleButton {
+        case .add:
+            realmService.updateWord(input.meaning)
+            styleButton = StyleButton.remove(title: "remove_dictionaty".localized)
+            output?.updateStyleAction(with: styleButton)
+        case .remove:
+            realmService.removeObjectWordModel(by: input.meaning.id)
+            styleButton = StyleButton.add(title: "add_dictionary".localized)
+            output?.updateStyleAction(with: styleButton)
+        }
     }
 }
 
