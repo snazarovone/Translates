@@ -102,6 +102,9 @@
 		ED10495F27011FEC007E4217 /* RealmServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10495E27011FEC007E4217 /* RealmServiceProtocol.swift */; };
 		ED1049622701221F007E4217 /* MeaningsModelRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1049612701221F007E4217 /* MeaningsModelRM.swift */; };
 		ED104965270127E7007E4217 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104964270127E7007E4217 /* Bundle+Extensions.swift */; };
+		ED10496A27012FF2007E4217 /* DictionaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10496727012FF2007E4217 /* DictionaryDataSource.swift */; };
+		ED10496B27012FF2007E4217 /* DictionaryTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10496827012FF2007E4217 /* DictionaryTableViewSection.swift */; };
+		ED10496C27012FF2007E4217 /* DictionaryViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10496927012FF2007E4217 /* DictionaryViewController+UITableView.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -244,6 +247,9 @@
 		ED10495E27011FEC007E4217 /* RealmServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmServiceProtocol.swift; sourceTree = "<group>"; };
 		ED1049612701221F007E4217 /* MeaningsModelRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsModelRM.swift; sourceTree = "<group>"; };
 		ED104964270127E7007E4217 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		ED10496727012FF2007E4217 /* DictionaryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataSource.swift; sourceTree = "<group>"; };
+		ED10496827012FF2007E4217 /* DictionaryTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewSection.swift; sourceTree = "<group>"; };
+		ED10496927012FF2007E4217 /* DictionaryViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryViewController+UITableView.swift"; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -351,11 +357,14 @@
 		ED10482526FFA7B5007E4217 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				ED10496E27013010007E4217 /* Items */,
 				ED10482926FFA7DC007E4217 /* DictionaryPresenter.swift */,
 				ED10482A26FFA7DC007E4217 /* DictionaryViewController.swift */,
 				ED10482B26FFA7DC007E4217 /* DictionaryAssembly.swift */,
 				ED10482C26FFA7DC007E4217 /* DictionaryInteractor.swift */,
 				ED10482D26FFA7DC007E4217 /* DictionaryViewProtocol.swift */,
+				ED10496727012FF2007E4217 /* DictionaryDataSource.swift */,
+				ED10496927012FF2007E4217 /* DictionaryViewController+UITableView.swift */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -632,6 +641,14 @@
 				ED1049612701221F007E4217 /* MeaningsModelRM.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ED10496E27013010007E4217 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				ED10496827012FF2007E4217 /* DictionaryTableViewSection.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		ED4B605F26FF4DFA005A1352 = {
@@ -1140,6 +1157,7 @@
 				ED1048AF26FFD07F007E4217 /* TableViewDataSource.swift in Sources */,
 				ED1048A226FFCAEF007E4217 /* TranslationModel.swift in Sources */,
 				ED10495F27011FEC007E4217 /* RealmServiceProtocol.swift in Sources */,
+				ED10496B27012FF2007E4217 /* DictionaryTableViewSection.swift in Sources */,
 				ED10487E26FFBFAD007E4217 /* APIServiceMain.swift in Sources */,
 				ED10494A27011977007E4217 /* StyleButton.swift in Sources */,
 				ED10492127010905007E4217 /* MeaningsResponseData.swift in Sources */,
@@ -1152,6 +1170,7 @@
 				ED1048B626FFD07F007E4217 /* UITableView+Extension.swift in Sources */,
 				ED104911270100D7007E4217 /* TopDetailWordTableViewCell.swift in Sources */,
 				ED10484926FFB501007E4217 /* SearchPlaceholder.swift in Sources */,
+				ED10496C27012FF2007E4217 /* DictionaryViewController+UITableView.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
 				ED10483D26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift in Sources */,
 				ED4B60F126FF7461005A1352 /* NavigationItemManager.swift in Sources */,
@@ -1164,6 +1183,7 @@
 				ED104912270100D7007E4217 /* TopDetailWordCellModel.swift in Sources */,
 				ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */,
 				ED1048F22700F0E9007E4217 /* DetailWordCoordinatorOutput.swift in Sources */,
+				ED10496A27012FF2007E4217 /* DictionaryDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

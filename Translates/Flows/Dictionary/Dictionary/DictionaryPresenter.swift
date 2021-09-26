@@ -9,7 +9,6 @@
 import UIKit
 
 protocol DictionaryPresenterInput: AnyObject {
-    // TODO: presentation input methods
 }
 
 protocol DictionaryPresenterOutput: AnyObject {

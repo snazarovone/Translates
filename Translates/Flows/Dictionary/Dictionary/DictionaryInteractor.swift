@@ -6,14 +6,14 @@
 //  
 //
 
-import UIKit
+import RealmSwift
 
 final class DictionaryInteractor {
 
     unowned var presenter: DictionaryPresenter?
     
-   //  private let apiWrapper = APIWrapper()
+    private let realmManager = RealmService.shared
+    private var notification: NotificationToken?
 
-    // TODO: Implement use case methods
-
+    private (set) var words = [MeaningsModel]()
 }
