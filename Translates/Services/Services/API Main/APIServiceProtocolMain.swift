@@ -15,4 +15,10 @@ protocol APIServiceProtocolMain {
         _ request: SearchRequest,
         completion: ((Swift.Result<SearchResponseData, Error>) -> Void)?
     )
+    
+    /// Return full information about meaning
+    func performMeaningsRequest(
+        _ request: MeaningsRequest,
+        completion: ((Swift.Result<MeaningsResponseData, Error>) -> Void)?
+    )
 }

@@ -17,7 +17,10 @@ protocol DetailWordPresenterOutput: AnyObject {
     var presenter: DetailWordPresenterInput? { get set }
     
     func setTitleNavigation(with text: String)
-    func prepareData(word: String, meaning: MeaningsModel)
+    func prepareData(word: String,
+                     meaning: MeaningsModel,
+                     model: MeaningsResponseModel?)
+    func loadingData(_ animating: Bool)
 }
 
 final class DetailWordPresenter {
@@ -27,9 +30,31 @@ final class DetailWordPresenter {
     var interactor: DetailWordInteractor?
     
     private let input: DetailWordPresenter.Input
+    private var meanings: MeaningsResponseModel?
     
     init(_ input: DetailWordPresenter.Input) {
         self.input = input
+    }
+    
+    func success(with model: [MeaningsResponseModel]) {
+        self.meanings = model.first
+        output?.loadingData(false)
+        prepareData()
+    }
+    
+    func failer() {
+        output?.loadingData(false)
+    }
+}
+
+private extension DetailWordPresenter {
+    func prepareData() {
+        output?.setTitleNavigation(with: input.word)
+        output?.prepareData(
+            word: input.word,
+            meaning: input.meaning,
+            model: meanings
+        )
     }
 }
 
@@ -37,8 +62,9 @@ final class DetailWordPresenter {
 
 extension DetailWordPresenter: DetailWordPresenterInput {
     func onStart() {
-        output?.setTitleNavigation(with: input.word)
-        output?.prepareData(word: input.word, meaning: input.meaning)
+        output?.loadingData(true)
+        prepareData()
+        interactor?.meanings(with: "\(input.meaning.id)")
     }
 }
 

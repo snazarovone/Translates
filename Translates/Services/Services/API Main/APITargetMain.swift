@@ -10,8 +10,8 @@ import Moya
 import Alamofire
 
 enum APITargetMain {
-    
     case search(request: SearchRequest)
+    case meanings(request: MeaningsRequest)
 }
 
 extension APITargetMain: TargetType {
@@ -25,12 +25,14 @@ extension APITargetMain: TargetType {
         switch self {
         case .search:
             return "api/public/\(ver)/words/search"
+        case .meanings:
+            return "api/public/\(ver)/meanings"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .search:
+        case .search, .meanings:
             return .get
         }
     }
@@ -41,7 +43,7 @@ extension APITargetMain: TargetType {
     
     var task: Task {
         switch self {
-        case .search:
+        case .search, .meanings:
             return .requestParameters(parameters: requestParameters, encoding: URLEncoding.queryString)
         }
     }
@@ -49,6 +51,7 @@ extension APITargetMain: TargetType {
     var requestParameters: [String: Any] {
         switch self {
         case .search(let request): return request.queryParameters
+        case .meanings(let request): return request.queryParameters
         }
     }
     

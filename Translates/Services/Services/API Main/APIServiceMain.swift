@@ -44,4 +44,14 @@ class APIServiceMain: BaseAPIService, APIServiceProtocolMain {
             )
         }
     }
+    
+    /// Return full information about meaning
+    func performMeaningsRequest(
+        _ request: MeaningsRequest,
+        completion: ((Result<MeaningsResponseData, Error>) -> Void)?) {
+        provider.request(
+            .meanings(request: request),
+            completion: createInnerCompletionBlock(from: completion)
+        )
+    }
 }

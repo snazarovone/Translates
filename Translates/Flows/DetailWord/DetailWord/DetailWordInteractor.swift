@@ -12,8 +12,19 @@ final class DetailWordInteractor {
 
     unowned var presenter: DetailWordPresenter?
     
-   //  private let apiWrapper = APIWrapper()
+    private let apiWrapper = APIWrapperMain()
 
-    // TODO: Implement use case methods
+    func meanings(with id: String) {
+        apiWrapper.meaningsRequest(
+            with: MeaningsRequest(ids: id)) { [weak self] result in
+            switch result {
+            case .success(let model):
+                self?.presenter?.success(with: model)
+            case .failure(let error):
+                print(error.localizedDescription)
+                self?.presenter?.failer()
+            }
+        }
+    }
 
 }

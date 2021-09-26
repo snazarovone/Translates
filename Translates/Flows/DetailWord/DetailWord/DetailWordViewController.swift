@@ -66,7 +66,19 @@ extension DetailWordViewController {
         title = text
     }
     
-    func prepareData(word: String, meaning: MeaningsModel) {
-        dataSource?.prepareData(word: word, meaning: meaning)
+    func prepareData(word: String,
+                     meaning: MeaningsModel,
+                     model: MeaningsResponseModel?) {
+        dataSource?.prepareData(word: word, meaning: meaning, model: model)
+    }
+    
+    func loadingData(_ animating: Bool) {
+        DispatchQueue.main.async {
+            if animating {
+                self.tableView.startLoading()
+            } else {
+                self.tableView.stopLoading()
+            }
+        }
     }
 }

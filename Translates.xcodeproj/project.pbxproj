@@ -83,6 +83,18 @@
 		ED104910270100D7007E4217 /* TopDetailWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED10490D270100D7007E4217 /* TopDetailWordTableViewCell.xib */; };
 		ED104911270100D7007E4217 /* TopDetailWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10490E270100D7007E4217 /* TopDetailWordTableViewCell.swift */; };
 		ED104912270100D7007E4217 /* TopDetailWordCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10490F270100D7007E4217 /* TopDetailWordCellModel.swift */; };
+		ED10491E270107CA007E4217 /* MeaningsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10491D270107CA007E4217 /* MeaningsRequest.swift */; };
+		ED10492127010905007E4217 /* MeaningsResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10492027010905007E4217 /* MeaningsResponseData.swift */; };
+		ED10492527010926007E4217 /* MeaningsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10492427010926007E4217 /* MeaningsResponseModel.swift */; };
+		ED10492827010A10007E4217 /* DefinitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10492727010A10007E4217 /* DefinitionModel.swift */; };
+		ED10492B27010A6C007E4217 /* ExamplesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10492A27010A6C007E4217 /* ExamplesModel.swift */; };
+		ED10492E27010AEF007E4217 /* AlternativeTranslationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10492D27010AEF007E4217 /* AlternativeTranslationsModel.swift */; };
+		ED104933270113CF007E4217 /* PlainTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED104930270113CF007E4217 /* PlainTextTableViewCell.xib */; };
+		ED104934270113CF007E4217 /* PlainTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104931270113CF007E4217 /* PlainTextTableViewCell.swift */; };
+		ED104935270113CF007E4217 /* PlainTextCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104932270113CF007E4217 /* PlainTextCellModel.swift */; };
+		ED10493D27011423007E4217 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED10493A27011423007E4217 /* EmptyTableViewCell.xib */; };
+		ED10493E27011423007E4217 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10493B27011423007E4217 /* EmptyTableViewCell.swift */; };
+		ED10493F27011423007E4217 /* EmptyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10493C27011423007E4217 /* EmptyCellModel.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -206,6 +218,18 @@
 		ED10490D270100D7007E4217 /* TopDetailWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopDetailWordTableViewCell.xib; sourceTree = "<group>"; };
 		ED10490E270100D7007E4217 /* TopDetailWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailWordTableViewCell.swift; sourceTree = "<group>"; };
 		ED10490F270100D7007E4217 /* TopDetailWordCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailWordCellModel.swift; sourceTree = "<group>"; };
+		ED10491D270107CA007E4217 /* MeaningsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsRequest.swift; sourceTree = "<group>"; };
+		ED10492027010905007E4217 /* MeaningsResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsResponseData.swift; sourceTree = "<group>"; };
+		ED10492427010926007E4217 /* MeaningsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsResponseModel.swift; sourceTree = "<group>"; };
+		ED10492727010A10007E4217 /* DefinitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionModel.swift; sourceTree = "<group>"; };
+		ED10492A27010A6C007E4217 /* ExamplesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesModel.swift; sourceTree = "<group>"; };
+		ED10492D27010AEF007E4217 /* AlternativeTranslationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternativeTranslationsModel.swift; sourceTree = "<group>"; };
+		ED104930270113CF007E4217 /* PlainTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlainTextTableViewCell.xib; sourceTree = "<group>"; };
+		ED104931270113CF007E4217 /* PlainTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextTableViewCell.swift; sourceTree = "<group>"; };
+		ED104932270113CF007E4217 /* PlainTextCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextCellModel.swift; sourceTree = "<group>"; };
+		ED10493A27011423007E4217 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		ED10493B27011423007E4217 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		ED10493C27011423007E4217 /* EmptyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCellModel.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -377,6 +401,7 @@
 		ED10487326FFBF53007E4217 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED10492327010919007E4217 /* Meanings */,
 				ED10489A26FFCA61007E4217 /* Search */,
 				ED10487426FFBF65007E4217 /* Base */,
 			);
@@ -396,6 +421,7 @@
 		ED10488C26FFC165007E4217 /* Rest API */ = {
 			isa = PBXGroup;
 			children = (
+				ED10491C270107B3007E4217 /* Meanings */,
 				ED10488D26FFC170007E4217 /* Search */,
 			);
 			path = "Rest API";
@@ -454,6 +480,8 @@
 		ED1048C726FFD38B007E4217 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ED1049392701140D007E4217 /* Empty */,
+				ED104937270113FB007E4217 /* PlainText */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -521,6 +549,46 @@
 				ED10490F270100D7007E4217 /* TopDetailWordCellModel.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED10491C270107B3007E4217 /* Meanings */ = {
+			isa = PBXGroup;
+			children = (
+				ED10491D270107CA007E4217 /* MeaningsRequest.swift */,
+				ED10492027010905007E4217 /* MeaningsResponseData.swift */,
+			);
+			path = Meanings;
+			sourceTree = "<group>";
+		};
+		ED10492327010919007E4217 /* Meanings */ = {
+			isa = PBXGroup;
+			children = (
+				ED10492427010926007E4217 /* MeaningsResponseModel.swift */,
+				ED10492727010A10007E4217 /* DefinitionModel.swift */,
+				ED10492A27010A6C007E4217 /* ExamplesModel.swift */,
+				ED10492D27010AEF007E4217 /* AlternativeTranslationsModel.swift */,
+			);
+			path = Meanings;
+			sourceTree = "<group>";
+		};
+		ED104937270113FB007E4217 /* PlainText */ = {
+			isa = PBXGroup;
+			children = (
+				ED104930270113CF007E4217 /* PlainTextTableViewCell.xib */,
+				ED104931270113CF007E4217 /* PlainTextTableViewCell.swift */,
+				ED104932270113CF007E4217 /* PlainTextCellModel.swift */,
+			);
+			path = PlainText;
+			sourceTree = "<group>";
+		};
+		ED1049392701140D007E4217 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				ED10493A27011423007E4217 /* EmptyTableViewCell.xib */,
+				ED10493B27011423007E4217 /* EmptyTableViewCell.swift */,
+				ED10493C27011423007E4217 /* EmptyCellModel.swift */,
+			);
+			path = Empty;
 			sourceTree = "<group>";
 		};
 		ED4B605F26FF4DFA005A1352 = {
@@ -862,6 +930,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED10493D27011423007E4217 /* EmptyTableViewCell.xib in Resources */,
 				ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */,
 				ED4B60EC26FF73A0005A1352 /* Localizable.strings in Resources */,
 				ED104910270100D7007E4217 /* TopDetailWordTableViewCell.xib in Resources */,
@@ -869,6 +938,7 @@
 				ED1048DD27009A29007E4217 /* WordTableViewCell.xib in Resources */,
 				ED9AB77126FF7CCC001734B3 /* book-with-bookmark.json in Resources */,
 				ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */,
+				ED104933270113CF007E4217 /* PlainTextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,6 +1018,8 @@
 				ED4B60ED26FF73A0005A1352 /* String+Extension.swift in Sources */,
 				ED4B60B026FF7089005A1352 /* Coordinatable.swift in Sources */,
 				ED9AB78A26FFA203001734B3 /* TabBarViewProtocol.swift in Sources */,
+				ED104935270113CF007E4217 /* PlainTextCellModel.swift in Sources */,
+				ED10491E270107CA007E4217 /* MeaningsRequest.swift in Sources */,
 				ED1048B326FFD07F007E4217 /* TableViewSection.swift in Sources */,
 				ED4B60B126FF7089005A1352 /* Blocks.swift in Sources */,
 				ED1048DF27009A29007E4217 /* WordCellModel.swift in Sources */,
@@ -956,6 +1028,7 @@
 				ED10485826FFBE3A007E4217 /* BaseRequestInterceptor.swift in Sources */,
 				ED1048B526FFD07F007E4217 /* DisplayCycle.swift in Sources */,
 				ED4B60C026FF7229005A1352 /* AppDelegate.swift in Sources */,
+				ED10493F27011423007E4217 /* EmptyCellModel.swift in Sources */,
 				ED9AB78626FFA203001734B3 /* TabBarPresenter.swift in Sources */,
 				ED4B60DD26FF72B9005A1352 /* Colors.swift in Sources */,
 				ED10481A26FFA4BF007E4217 /* SearchAssembly.swift in Sources */,
@@ -972,9 +1045,11 @@
 				ED10485C26FFBE3A007E4217 /* BaseAPIServiceProtocol.swift in Sources */,
 				ED10487B26FFBFAD007E4217 /* APITargetMain.swift in Sources */,
 				ED4B60B526FF7089005A1352 /* BaseCoordinator.swift in Sources */,
+				ED10493E27011423007E4217 /* EmptyTableViewCell.swift in Sources */,
 				ED10485E26FFBE3A007E4217 /* ErrorModel.swift in Sources */,
 				ED1048AE26FFD07F007E4217 /* CollectionAndTableViewCompatible.swift in Sources */,
 				ED1048F52700F0E9007E4217 /* DetailWordAssembly.swift in Sources */,
+				ED10492E27010AEF007E4217 /* AlternativeTranslationsModel.swift in Sources */,
 				ED9AB74226FF7B63001734B3 /* TranslateLauncherCoordinatorOutput.swift in Sources */,
 				ED9AB74526FF7B63001734B3 /* TranslateLauncherAssembly.swift in Sources */,
 				ED1048DE27009A29007E4217 /* WordTableViewCell.swift in Sources */,
@@ -982,6 +1057,7 @@
 				ED4B60DB26FF72B9005A1352 /* UINavigatoionBar+Extension.swift in Sources */,
 				ED1048E527009E8B007E4217 /* WordsHeaderDeleagte.swift in Sources */,
 				ED10485726FFBE3A007E4217 /* BaseTargetType.swift in Sources */,
+				ED104934270113CF007E4217 /* PlainTextTableViewCell.swift in Sources */,
 				ED10485A26FFBE3A007E4217 /* APIErrorResponse.swift in Sources */,
 				ED1048B426FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift in Sources */,
 				ED10481926FFA4BF007E4217 /* SearchViewController.swift in Sources */,
@@ -994,6 +1070,7 @@
 				ED1048CC26FFD3A7007E4217 /* WordsHeaderView.swift in Sources */,
 				ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */,
 				ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */,
+				ED10492B27010A6C007E4217 /* ExamplesModel.swift in Sources */,
 				ED1049092700FFCD007E4217 /* DetailWordTableViewSection.swift in Sources */,
 				ED10488F26FFC183007E4217 /* SearchRequest.swift in Sources */,
 				ED10489826FFCA4F007E4217 /* SearchResponseData.swift in Sources */,
@@ -1010,13 +1087,16 @@
 				ED10482F26FFA7DC007E4217 /* DictionaryFactory.swift in Sources */,
 				ED10481726FFA4BF007E4217 /* SearchCoordinatorOutput.swift in Sources */,
 				ED4B60DC26FF72B9005A1352 /* BaseNavigationController.swift in Sources */,
+				ED10492527010926007E4217 /* MeaningsResponseModel.swift in Sources */,
 				ED1048AF26FFD07F007E4217 /* TableViewDataSource.swift in Sources */,
 				ED1048A226FFCAEF007E4217 /* TranslationModel.swift in Sources */,
 				ED10487E26FFBFAD007E4217 /* APIServiceMain.swift in Sources */,
+				ED10492127010905007E4217 /* MeaningsResponseData.swift in Sources */,
 				ED1049082700FFCD007E4217 /* DetailWordDataSource.swift in Sources */,
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
 				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
+				ED10492827010A10007E4217 /* DefinitionModel.swift in Sources */,
 				ED1048CE26FFD3A7007E4217 /* WordsHeaderViewModel.swift in Sources */,
 				ED1048B626FFD07F007E4217 /* UITableView+Extension.swift in Sources */,
 				ED104911270100D7007E4217 /* TopDetailWordTableViewCell.swift in Sources */,
