@@ -22,8 +22,11 @@ class DetailWordViewController: BaseViewController, DetailWordAssemblable {
         tv.separatorStyle = .none
         tv.backgroundColor = .tWhite
         tv.estimatedRowHeight = 100
+        tv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 120, right: 0)
         return tv
     }()
+    
+    private let dictAction = TranslateButton()
     
     var dataSource: DetailWordDataSource?
 
@@ -41,16 +44,32 @@ class DetailWordViewController: BaseViewController, DetailWordAssemblable {
     
     override func initUI() {
         
-        view.addSubviews(tableView)
+        view.addSubviews(tableView, dictAction)
         dataSource = DetailWordDataSource(tableView: tableView)
         tableView.delegate = self
         
         presenter?.onStart()
+        dictAction.setStyle(
+            with: .add(title: "add_dictionary".localized)
+        )
     }
     
     override func initConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        
+        dictAction.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(16)
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-32)
+            make.height.equalTo(54)
+        }
+    }
+    
+    override func initListeners() {
+        dictAction.touchUp = { [weak self] _ in
+            
         }
     }
 

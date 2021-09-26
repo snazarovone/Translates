@@ -10,6 +10,8 @@ import UIKit
 
 protocol DetailWordPresenterInput: AnyObject {
     func onStart()
+    func addToDictionary()
+    func removeFromDictionary()
 }
 
 protocol DetailWordPresenterOutput: AnyObject {
@@ -65,6 +67,12 @@ extension DetailWordPresenter: DetailWordPresenterInput {
         output?.loadingData(true)
         prepareData()
         interactor?.meanings(with: "\(input.meaning.id)")
+    }
+    
+    func addToDictionary() {
+    }
+    
+    func removeFromDictionary() {
     }
 }
 

@@ -95,6 +95,9 @@
 		ED10493D27011423007E4217 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED10493A27011423007E4217 /* EmptyTableViewCell.xib */; };
 		ED10493E27011423007E4217 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10493B27011423007E4217 /* EmptyTableViewCell.swift */; };
 		ED10493F27011423007E4217 /* EmptyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10493C27011423007E4217 /* EmptyCellModel.swift */; };
+		ED10494327011879007E4217 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10494227011879007E4217 /* ActionButton.swift */; };
+		ED104947270118C4007E4217 /* TranslateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104946270118C4007E4217 /* TranslateButton.swift */; };
+		ED10494A27011977007E4217 /* StyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10494927011977007E4217 /* StyleButton.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -230,6 +233,9 @@
 		ED10493A27011423007E4217 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		ED10493B27011423007E4217 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		ED10493C27011423007E4217 /* EmptyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCellModel.swift; sourceTree = "<group>"; };
+		ED10494227011879007E4217 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		ED104946270118C4007E4217 /* TranslateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateButton.swift; sourceTree = "<group>"; };
+		ED10494927011977007E4217 /* StyleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleButton.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -591,6 +597,16 @@
 			path = Empty;
 			sourceTree = "<group>";
 		};
+		ED10494127011837007E4217 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				ED10494227011879007E4217 /* ActionButton.swift */,
+				ED104946270118C4007E4217 /* TranslateButton.swift */,
+				ED10494927011977007E4217 /* StyleButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		ED4B605F26FF4DFA005A1352 = {
 			isa = PBXGroup;
 			children = (
@@ -785,6 +801,7 @@
 		ED4B60E026FF7354005A1352 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				ED10494127011837007E4217 /* UIButton */,
 				ED4B60E226FF7364005A1352 /* Base */,
 				ED4B60E126FF735D005A1352 /* NavigationBar */,
 				ED10484026FFADA1007E4217 /* Search Bar */,
@@ -1018,6 +1035,7 @@
 				ED4B60ED26FF73A0005A1352 /* String+Extension.swift in Sources */,
 				ED4B60B026FF7089005A1352 /* Coordinatable.swift in Sources */,
 				ED9AB78A26FFA203001734B3 /* TabBarViewProtocol.swift in Sources */,
+				ED104947270118C4007E4217 /* TranslateButton.swift in Sources */,
 				ED104935270113CF007E4217 /* PlainTextCellModel.swift in Sources */,
 				ED10491E270107CA007E4217 /* MeaningsRequest.swift in Sources */,
 				ED1048B326FFD07F007E4217 /* TableViewSection.swift in Sources */,
@@ -1091,6 +1109,7 @@
 				ED1048AF26FFD07F007E4217 /* TableViewDataSource.swift in Sources */,
 				ED1048A226FFCAEF007E4217 /* TranslationModel.swift in Sources */,
 				ED10487E26FFBFAD007E4217 /* APIServiceMain.swift in Sources */,
+				ED10494A27011977007E4217 /* StyleButton.swift in Sources */,
 				ED10492127010905007E4217 /* MeaningsResponseData.swift in Sources */,
 				ED1049082700FFCD007E4217 /* DetailWordDataSource.swift in Sources */,
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
@@ -1108,6 +1127,7 @@
 				ED10484526FFAE83007E4217 /* UISearchBar+Extension.swift in Sources */,
 				ED1048F32700F0E9007E4217 /* DetailWordPresenter.swift in Sources */,
 				ED10483526FFA7DC007E4217 /* DictionaryViewProtocol.swift in Sources */,
+				ED10494327011879007E4217 /* ActionButton.swift in Sources */,
 				ED1048B026FFD07F007E4217 /* TableViewCompatible.swift in Sources */,
 				ED104912270100D7007E4217 /* TopDetailWordCellModel.swift in Sources */,
 				ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */,
