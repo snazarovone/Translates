@@ -26,6 +26,9 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         let tv = UITableView()
         tv.separatorStyle = .none
         tv.backgroundColor = .clear
+        tv.estimatedSectionHeaderHeight = 54
+        tv.estimatedRowHeight = 54
+        tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
     }()
 
@@ -33,12 +36,12 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         super.viewDidLoad()
         
         view.backgroundColor = .tWhite
-        registerForKeyboardNotifications()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        registerForKeyboardNotifications()
         navController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -103,5 +106,15 @@ extension SearchViewController {
     func prepareData(with data: [SearchResponseModel]) {
         placeholderView.isHidden = !data.isEmpty
         dataSource?.prepareData(with: data)
+    }
+    
+    func loadingData(_ animating: Bool) {
+        DispatchQueue.main.async {
+            if animating {
+                self.tableView.startLoading()
+            } else {
+                self.tableView.stopLoading()
+            }
+        }
     }
 }

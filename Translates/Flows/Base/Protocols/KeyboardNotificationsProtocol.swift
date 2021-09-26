@@ -25,7 +25,6 @@ extension KeyboardNotifications where Self: UIViewController {
         ) { [weak self] notification in
             self?.keyboardNotification(notification)
         }
-        view.layoutIfNeeded()
     }
     
     func deregisterForKeyboardNotifications() {

@@ -28,8 +28,9 @@ class SearchDataSource: TableViewDataSource {
             )
         })
         
-   
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     private func registerCell() {

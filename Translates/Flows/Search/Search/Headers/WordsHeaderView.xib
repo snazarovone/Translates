@@ -18,7 +18,7 @@
                     <rect key="frame" x="16" y="10" width="54" height="44"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="7r8-fG-AdX"/>
+                        <constraint firstAttribute="height" priority="998" constant="44" id="7r8-fG-AdX"/>
                         <constraint firstAttribute="width" constant="54" id="xIP-NY-x2p"/>
                     </constraints>
                 </view>
@@ -40,7 +40,6 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="SRB-uy-AF3" firstAttribute="leading" secondItem="gSB-Kf-r0q" secondAttribute="trailing" constant="16" id="8UY-SE-lNu"/>
                 <constraint firstAttribute="trailing" secondItem="SRB-uy-AF3" secondAttribute="trailing" constant="16" id="iNR-3Q-JKU"/>

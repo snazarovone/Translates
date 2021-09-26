@@ -17,7 +17,25 @@ extension SearchViewController: UITableViewDelegate {
         UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        UIView()
+    }
+
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        0.00001
+        .leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        50.0
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetMaxY = Float(scrollView.contentOffset.y + scrollView.bounds.size.height)
+        let contentHeight = Float(scrollView.contentSize.height)
+        let lastCellIsVisible = contentOffsetMaxY > contentHeight + 44
+        if lastCellIsVisible {
+            presenter?.willDisplayLastCell()
+        }
     }
 }
