@@ -44,6 +44,6 @@ extension SearchViewController: UITableViewDelegate {
                 as? WordCellModel else {
             return
         }
-        presenter?.didSelectWord(with: model.meaning)
+        presenter?.didSelectWord(with: model.meaning, searchWord: model.searchWord)
     }
 }

@@ -21,15 +21,16 @@ class SearchDataSource: TableViewDataSource {
     func prepareData(with data: [SearchResponseModel]) {
         
         sections = data.enumerated().map({
-            SearchTableViewSection(
-                headerItem: WordsHeaderViewModel(
+            let word = $0.element.text
+            return SearchTableViewSection(
+                    headerItem: WordsHeaderViewModel(
                     with: $0.element,
                     isCollapsed: true,
                     index: $0.offset,
                     delegate: self
                 ),
                 items: $0.element.meanings.map({
-                    WordCellModel(with: $0)
+                    WordCellModel(with: $0, searchWord: word)
                 }),
                 collapsed: true
             )

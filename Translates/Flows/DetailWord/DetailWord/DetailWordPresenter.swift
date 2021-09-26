@@ -9,14 +9,15 @@
 import UIKit
 
 protocol DetailWordPresenterInput: AnyObject {
-    // TODO: presentation input methods
+    func onStart()
 }
 
 protocol DetailWordPresenterOutput: AnyObject {
     
     var presenter: DetailWordPresenterInput? { get set }
     
-    // TODO: presentation output methods
+    func setTitleNavigation(with text: String)
+    func prepareData(word: String, meaning: MeaningsModel)
 }
 
 final class DetailWordPresenter {
@@ -35,12 +36,15 @@ final class DetailWordPresenter {
 // MARK: - DetailWordPresenterInput
 
 extension DetailWordPresenter: DetailWordPresenterInput {
-    // TODO: implement input presentation methods
-
+    func onStart() {
+        output?.setTitleNavigation(with: input.word)
+        output?.prepareData(word: input.word, meaning: input.meaning)
+    }
 }
 
 extension DetailWordPresenter {
     struct Input {
+        var word: String
         var meaning: MeaningsModel
     }
 }

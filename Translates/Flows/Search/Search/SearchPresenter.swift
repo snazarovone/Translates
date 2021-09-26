@@ -26,7 +26,8 @@ protocol SearchPresenterInput: AnyObject {
     func willDisplayLastCell()
     
     /// Было выбрано слово
-    func didSelectWord(with meaning: MeaningsModel)
+    func didSelectWord(with meaning: MeaningsModel,
+                       searchWord: String?)
 }
 
 protocol SearchPresenterOutput: AnyObject {
@@ -63,6 +64,17 @@ final class SearchPresenter {
         reachedEndOfItems = data.isEmpty ? true : false
         output?.loadingData(false)
         output?.prepareData(with: searchWords)
+    }
+}
+
+private extension SearchPresenter {
+    func getWord(by id: Int) -> String? {
+        for item in searchWords {
+            if item.meanings.first(where: { $0.id == id }) != nil {
+                return item.text
+            }
+        }
+        return nil
     }
 }
 
@@ -108,9 +120,11 @@ extension SearchPresenter: SearchPresenterInput {
         }
     }
     
-    func didSelectWord(with meaning: MeaningsModel) {
+    func didSelectWord(with meaning: MeaningsModel,
+                       searchWord: String?) {
+        
         output?.onDetailWord?(
-            DetailWordPresenter.Input(meaning: meaning)
+            DetailWordPresenter.Input(word: searchWord ?? "", meaning: meaning)
         )
     }
 }

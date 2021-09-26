@@ -77,6 +77,12 @@
 		ED1048F52700F0E9007E4217 /* DetailWordAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048ED2700F0E9007E4217 /* DetailWordAssembly.swift */; };
 		ED1048F62700F0E9007E4217 /* DetailWordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048EE2700F0E9007E4217 /* DetailWordInteractor.swift */; };
 		ED1048F72700F0E9007E4217 /* DetailWordViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048EF2700F0E9007E4217 /* DetailWordViewProtocol.swift */; };
+		ED1049082700FFCD007E4217 /* DetailWordDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1049052700FFCD007E4217 /* DetailWordDataSource.swift */; };
+		ED1049092700FFCD007E4217 /* DetailWordTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1049062700FFCD007E4217 /* DetailWordTableViewSection.swift */; };
+		ED10490A2700FFCD007E4217 /* DetailWordViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1049072700FFCD007E4217 /* DetailWordViewController+UITableView.swift */; };
+		ED104910270100D7007E4217 /* TopDetailWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED10490D270100D7007E4217 /* TopDetailWordTableViewCell.xib */; };
+		ED104911270100D7007E4217 /* TopDetailWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10490E270100D7007E4217 /* TopDetailWordTableViewCell.swift */; };
+		ED104912270100D7007E4217 /* TopDetailWordCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10490F270100D7007E4217 /* TopDetailWordCellModel.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -194,6 +200,12 @@
 		ED1048ED2700F0E9007E4217 /* DetailWordAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordAssembly.swift; sourceTree = "<group>"; };
 		ED1048EE2700F0E9007E4217 /* DetailWordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordInteractor.swift; sourceTree = "<group>"; };
 		ED1048EF2700F0E9007E4217 /* DetailWordViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordViewProtocol.swift; sourceTree = "<group>"; };
+		ED1049052700FFCD007E4217 /* DetailWordDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordDataSource.swift; sourceTree = "<group>"; };
+		ED1049062700FFCD007E4217 /* DetailWordTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewSection.swift; sourceTree = "<group>"; };
+		ED1049072700FFCD007E4217 /* DetailWordViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailWordViewController+UITableView.swift"; sourceTree = "<group>"; };
+		ED10490D270100D7007E4217 /* TopDetailWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopDetailWordTableViewCell.xib; sourceTree = "<group>"; };
+		ED10490E270100D7007E4217 /* TopDetailWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailWordTableViewCell.swift; sourceTree = "<group>"; };
+		ED10490F270100D7007E4217 /* TopDetailWordCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailWordCellModel.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -480,13 +492,35 @@
 		ED1048FA2700F0EF007E4217 /* DetailWord */ = {
 			isa = PBXGroup;
 			children = (
+				ED1049042700FFAA007E4217 /* Cells */,
+				ED1049032700FFA0007E4217 /* Items */,
 				ED1048EB2700F0E9007E4217 /* DetailWordPresenter.swift */,
 				ED1048EC2700F0E9007E4217 /* DetailWordViewController.swift */,
 				ED1048ED2700F0E9007E4217 /* DetailWordAssembly.swift */,
 				ED1048EE2700F0E9007E4217 /* DetailWordInteractor.swift */,
 				ED1048EF2700F0E9007E4217 /* DetailWordViewProtocol.swift */,
+				ED1049052700FFCD007E4217 /* DetailWordDataSource.swift */,
+				ED1049072700FFCD007E4217 /* DetailWordViewController+UITableView.swift */,
 			);
 			path = DetailWord;
+			sourceTree = "<group>";
+		};
+		ED1049032700FFA0007E4217 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				ED1049062700FFCD007E4217 /* DetailWordTableViewSection.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		ED1049042700FFAA007E4217 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED10490D270100D7007E4217 /* TopDetailWordTableViewCell.xib */,
+				ED10490E270100D7007E4217 /* TopDetailWordTableViewCell.swift */,
+				ED10490F270100D7007E4217 /* TopDetailWordCellModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		ED4B605F26FF4DFA005A1352 = {
@@ -830,6 +864,7 @@
 			files = (
 				ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */,
 				ED4B60EC26FF73A0005A1352 /* Localizable.strings in Resources */,
+				ED104910270100D7007E4217 /* TopDetailWordTableViewCell.xib in Resources */,
 				ED1048CD26FFD3A7007E4217 /* WordsHeaderView.xib in Resources */,
 				ED1048DD27009A29007E4217 /* WordTableViewCell.xib in Resources */,
 				ED9AB77126FF7CCC001734B3 /* book-with-bookmark.json in Resources */,
@@ -889,6 +924,7 @@
 				ED4B60EB26FF73A0005A1352 /* UIViewController+Extension.swift in Sources */,
 				ED1048F12700F0E9007E4217 /* DetailWordFactory.swift in Sources */,
 				ED9AB78826FFA203001734B3 /* TabBarAssembly.swift in Sources */,
+				ED10490A2700FFCD007E4217 /* DetailWordViewController+UITableView.swift in Sources */,
 				ED9AB78326FFA203001734B3 /* TabBarCoordinator.swift in Sources */,
 				ED4B60B226FF7089005A1352 /* ModulesFactory.swift in Sources */,
 				ED10485D26FFBE3A007E4217 /* Connectivity.swift in Sources */,
@@ -958,6 +994,7 @@
 				ED1048CC26FFD3A7007E4217 /* WordsHeaderView.swift in Sources */,
 				ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */,
 				ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */,
+				ED1049092700FFCD007E4217 /* DetailWordTableViewSection.swift in Sources */,
 				ED10488F26FFC183007E4217 /* SearchRequest.swift in Sources */,
 				ED10489826FFCA4F007E4217 /* SearchResponseData.swift in Sources */,
 				ED10483126FFA7DC007E4217 /* DictionaryPresenter.swift in Sources */,
@@ -976,11 +1013,13 @@
 				ED1048AF26FFD07F007E4217 /* TableViewDataSource.swift in Sources */,
 				ED1048A226FFCAEF007E4217 /* TranslationModel.swift in Sources */,
 				ED10487E26FFBFAD007E4217 /* APIServiceMain.swift in Sources */,
+				ED1049082700FFCD007E4217 /* DetailWordDataSource.swift in Sources */,
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
 				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
 				ED1048CE26FFD3A7007E4217 /* WordsHeaderViewModel.swift in Sources */,
 				ED1048B626FFD07F007E4217 /* UITableView+Extension.swift in Sources */,
+				ED104911270100D7007E4217 /* TopDetailWordTableViewCell.swift in Sources */,
 				ED10484926FFB501007E4217 /* SearchPlaceholder.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,
 				ED10483D26FFABE4007E4217 /* KeyboardNotificationsProtocol.swift in Sources */,
@@ -990,6 +1029,7 @@
 				ED1048F32700F0E9007E4217 /* DetailWordPresenter.swift in Sources */,
 				ED10483526FFA7DC007E4217 /* DictionaryViewProtocol.swift in Sources */,
 				ED1048B026FFD07F007E4217 /* TableViewCompatible.swift in Sources */,
+				ED104912270100D7007E4217 /* TopDetailWordCellModel.swift in Sources */,
 				ED9AB74726FF7B63001734B3 /* TranslateLauncherViewProtocol.swift in Sources */,
 				ED1048F22700F0E9007E4217 /* DetailWordCoordinatorOutput.swift in Sources */,
 			);

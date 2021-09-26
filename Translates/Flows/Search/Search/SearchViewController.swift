@@ -29,7 +29,6 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         tv.backgroundColor = .clear
         tv.estimatedSectionHeaderHeight = 54
         tv.estimatedRowHeight = 54
-        tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
     }()
 

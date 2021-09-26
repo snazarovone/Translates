@@ -33,5 +33,6 @@ extension UIColor {
     static let tBlack = UIColor(rgb: 0x352C38)
     static let tWhite = UIColor(rgb: 0xFFFFFF)
     static let tGrey = UIColor(rgb: 0x808A9B)
+    static let tBlue = UIColor(rgb: 0x5799DB)
 }
 // swiftlint:enable all

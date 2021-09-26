@@ -1,5 +1,5 @@
 //
-//  WordCellModel.swift
+//  TopDetailWordCellModel.swift
 //  Translates
 //
 //  Created by Sergey Nazarov on 26.09.2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WordCellModel: TableViewCompatible {
+class TopDetailWordCellModel: TableViewCompatible {
     
     let meaning: MeaningsModel
     let searchWord: String?
@@ -26,14 +26,14 @@ class WordCellModel: TableViewCompatible {
     
     /// Ссылка на картинку
     var urlImg: String? {
-        meaning.previewUrl
+        meaning.imageUrl
     }
 
     func cellForTableView(tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: self.reuseIdentifier,
             for: indexPath
-        ) as? WordTableViewCell else {
+        ) as? TopDetailWordTableViewCell else {
             return UITableViewCell()
         }
         cell.configure(with: self)
@@ -41,7 +41,7 @@ class WordCellModel: TableViewCompatible {
     }
     
     var reuseIdentifier: String {
-        String(describing: WordTableViewCell.self)
+        String(describing: TopDetailWordTableViewCell.self)
     }
     
     var selected = false
