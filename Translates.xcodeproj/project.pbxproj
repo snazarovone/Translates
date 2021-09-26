@@ -56,6 +56,15 @@
 		ED1048B426FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048AB26FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift */; };
 		ED1048B526FFD07F007E4217 /* DisplayCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048AC26FFD07F007E4217 /* DisplayCycle.swift */; };
 		ED1048B626FFD07F007E4217 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048AD26FFD07F007E4217 /* UITableView+Extension.swift */; };
+		ED1048BF26FFD1C5007E4217 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048BC26FFD1C5007E4217 /* SearchDataSource.swift */; };
+		ED1048C026FFD1C5007E4217 /* SearchTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048BD26FFD1C5007E4217 /* SearchTableViewSection.swift */; };
+		ED1048C126FFD1C5007E4217 /* SearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048BE26FFD1C5007E4217 /* SearchViewController+UITableView.swift */; };
+		ED1048CC26FFD3A7007E4217 /* WordsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048C926FFD3A7007E4217 /* WordsHeaderView.swift */; };
+		ED1048CD26FFD3A7007E4217 /* WordsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1048CA26FFD3A7007E4217 /* WordsHeaderView.xib */; };
+		ED1048CE26FFD3A7007E4217 /* WordsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048CB26FFD3A7007E4217 /* WordsHeaderViewModel.swift */; };
+		ED1048D126FFDCE4007E4217 /* WordsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048D026FFDCE4007E4217 /* WordsHolder.swift */; };
+		ED1048D426FFE229007E4217 /* DownloadImgManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048D326FFE229007E4217 /* DownloadImgManager.swift */; };
+		ED1048D726FFEB38007E4217 /* Application+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048D626FFEB38007E4217 /* Application+Extension.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -152,6 +161,15 @@
 		ED1048AB26FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionHeaderCompatible.swift; sourceTree = "<group>"; };
 		ED1048AC26FFD07F007E4217 /* DisplayCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCycle.swift; sourceTree = "<group>"; };
 		ED1048AD26FFD07F007E4217 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		ED1048BC26FFD1C5007E4217 /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
+		ED1048BD26FFD1C5007E4217 /* SearchTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewSection.swift; sourceTree = "<group>"; };
+		ED1048BE26FFD1C5007E4217 /* SearchViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UITableView.swift"; sourceTree = "<group>"; };
+		ED1048C926FFD3A7007E4217 /* WordsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsHeaderView.swift; sourceTree = "<group>"; };
+		ED1048CA26FFD3A7007E4217 /* WordsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordsHeaderView.xib; sourceTree = "<group>"; };
+		ED1048CB26FFD3A7007E4217 /* WordsHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsHeaderViewModel.swift; sourceTree = "<group>"; };
+		ED1048D026FFDCE4007E4217 /* WordsHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsHolder.swift; sourceTree = "<group>"; };
+		ED1048D326FFE229007E4217 /* DownloadImgManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImgManager.swift; sourceTree = "<group>"; };
+		ED1048D626FFEB38007E4217 /* Application+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extension.swift"; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -232,11 +250,15 @@
 		ED10481F26FFA4C7007E4217 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				ED1048C326FFD1CA007E4217 /* Items */,
+				ED1048C826FFD390007E4217 /* Headers */,
 				ED10481026FFA4BF007E4217 /* SearchPresenter.swift */,
 				ED10481126FFA4BF007E4217 /* SearchViewController.swift */,
 				ED10481226FFA4BF007E4217 /* SearchAssembly.swift */,
 				ED10481326FFA4BF007E4217 /* SearchInteractor.swift */,
 				ED10481426FFA4BF007E4217 /* SearchViewProtocol.swift */,
+				ED1048BC26FFD1C5007E4217 /* SearchDataSource.swift */,
+				ED1048BE26FFD1C5007E4217 /* SearchViewController+UITableView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -275,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				ED10484826FFB501007E4217 /* SearchPlaceholder.swift */,
+				ED1048D026FFDCE4007E4217 /* WordsHolder.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -363,6 +386,11 @@
 		ED1048B826FFD0C6007E4217 /* TableViewCompatible */ = {
 			isa = PBXGroup;
 			children = (
+				ED1048A626FFD07F007E4217 /* TableViewDataSource.swift */,
+				ED1048A726FFD07F007E4217 /* TableViewCompatible.swift */,
+				ED1048A826FFD07F007E4217 /* TableViewData.swift */,
+				ED1048AA26FFD07F007E4217 /* TableViewSection.swift */,
+				ED1048AB26FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift */,
 				ED1048B926FFD0E2007E4217 /* Shared */,
 			);
 			path = TableViewCompatible;
@@ -376,6 +404,31 @@
 				ED1048AC26FFD07F007E4217 /* DisplayCycle.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		ED1048C326FFD1CA007E4217 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				ED1048BD26FFD1C5007E4217 /* SearchTableViewSection.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		ED1048C726FFD38B007E4217 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED1048C826FFD390007E4217 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				ED1048C926FFD3A7007E4217 /* WordsHeaderView.swift */,
+				ED1048CA26FFD3A7007E4217 /* WordsHeaderView.xib */,
+				ED1048CB26FFD3A7007E4217 /* WordsHeaderViewModel.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		ED4B605F26FF4DFA005A1352 = {
@@ -479,6 +532,7 @@
 				ED10484426FFAE83007E4217 /* UISearchBar+Extension.swift */,
 				ED10484C26FFBB33007E4217 /* Utils.swift */,
 				ED1048AD26FFD07F007E4217 /* UITableView+Extension.swift */,
+				ED1048D626FFEB38007E4217 /* Application+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -538,15 +592,11 @@
 		ED4B609426FF6F8E005A1352 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				ED1048C726FFD38B007E4217 /* Cells */,
 				ED4B60D526FF72B9005A1352 /* BaseNavigationController.swift */,
 				ED4B60E426FF73A0005A1352 /* BaseViewController.swift */,
 				ED4B609526FF6F97005A1352 /* Protocols */,
 				ED1048B826FFD0C6007E4217 /* TableViewCompatible */,
-				ED1048A626FFD07F007E4217 /* TableViewDataSource.swift */,
-				ED1048A726FFD07F007E4217 /* TableViewCompatible.swift */,
-				ED1048A826FFD07F007E4217 /* TableViewData.swift */,
-				ED1048AA26FFD07F007E4217 /* TableViewSection.swift */,
-				ED1048AB26FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -601,6 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				ED4B60EF26FF7461005A1352 /* NavigationItemManager.swift */,
+				ED1048D326FFE229007E4217 /* DownloadImgManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -719,6 +770,7 @@
 			files = (
 				ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */,
 				ED4B60EC26FF73A0005A1352 /* Localizable.strings in Resources */,
+				ED1048CD26FFD3A7007E4217 /* WordsHeaderView.xib in Resources */,
 				ED9AB77126FF7CCC001734B3 /* book-with-bookmark.json in Resources */,
 				ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -778,11 +830,13 @@
 				ED9AB78326FFA203001734B3 /* TabBarCoordinator.swift in Sources */,
 				ED4B60B226FF7089005A1352 /* ModulesFactory.swift in Sources */,
 				ED10485D26FFBE3A007E4217 /* Connectivity.swift in Sources */,
+				ED1048D426FFE229007E4217 /* DownloadImgManager.swift in Sources */,
 				ED10484226FFADBE007E4217 /* SearchBarTranslate.swift in Sources */,
 				ED4B60AA26FF7089005A1352 /* CoordinatorFactoryProtocol.swift in Sources */,
 				ED10483026FFA7DC007E4217 /* DictionaryCoordinatorOutput.swift in Sources */,
 				ED4B60AD26FF7089005A1352 /* Routable.swift in Sources */,
 				ED1048B126FFD07F007E4217 /* TableViewData.swift in Sources */,
+				ED1048C126FFD1C5007E4217 /* SearchViewController+UITableView.swift in Sources */,
 				ED9AB78426FFA203001734B3 /* TabBarFactory.swift in Sources */,
 				ED4B60DA26FF72B9005A1352 /* BasePresenterOutput.swift in Sources */,
 				ED9AB74626FF7B63001734B3 /* TranslateLauncherInteractor.swift in Sources */,
@@ -807,10 +861,12 @@
 				ED10487D26FFBFAD007E4217 /* APIServiceProtocolMain.swift in Sources */,
 				ED10481826FFA4BF007E4217 /* SearchPresenter.swift in Sources */,
 				ED10488926FFC075007E4217 /* AppTarget.swift in Sources */,
+				ED1048BF26FFD1C5007E4217 /* SearchDataSource.swift in Sources */,
 				ED10481B26FFA4BF007E4217 /* SearchInteractor.swift in Sources */,
 				ED9AB74126FF7B63001734B3 /* TranslateLauncherFactory.swift in Sources */,
 				ED4B60DE26FF72B9005A1352 /* BaseView.swift in Sources */,
 				ED10489C26FFCA6C007E4217 /* SearchResponseModel.swift in Sources */,
+				ED1048D126FFDCE4007E4217 /* WordsHolder.swift in Sources */,
 				ED10485C26FFBE3A007E4217 /* BaseAPIServiceProtocol.swift in Sources */,
 				ED10487B26FFBFAD007E4217 /* APITargetMain.swift in Sources */,
 				ED4B60B526FF7089005A1352 /* BaseCoordinator.swift in Sources */,
@@ -830,6 +886,7 @@
 				ED10487C26FFBFAD007E4217 /* APIWrapperMain.swift in Sources */,
 				ED9AB78926FFA203001734B3 /* TabBarInteractor.swift in Sources */,
 				ED9AB78726FFA203001734B3 /* TabBarViewController.swift in Sources */,
+				ED1048CC26FFD3A7007E4217 /* WordsHeaderView.swift in Sources */,
 				ED9AB74026FF7B63001734B3 /* TranslateLauncherCoordinator.swift in Sources */,
 				ED4B60AE26FF7089005A1352 /* Presentable.swift in Sources */,
 				ED10488F26FFC183007E4217 /* SearchRequest.swift in Sources */,
@@ -837,10 +894,12 @@
 				ED10483126FFA7DC007E4217 /* DictionaryPresenter.swift in Sources */,
 				ED10489F26FFCAAA007E4217 /* MeaningsModel.swift in Sources */,
 				ED1048B226FFD07F007E4217 /* Configurable.swift in Sources */,
+				ED1048D726FFEB38007E4217 /* Application+Extension.swift in Sources */,
 				ED4B60E926FF73A0005A1352 /* BaseViewController.swift in Sources */,
 				ED10483326FFA7DC007E4217 /* DictionaryAssembly.swift in Sources */,
 				ED10485926FFBE3A007E4217 /* APIEmptyData.swift in Sources */,
 				ED10481C26FFA4BF007E4217 /* SearchViewProtocol.swift in Sources */,
+				ED1048C026FFD1C5007E4217 /* SearchTableViewSection.swift in Sources */,
 				ED10482F26FFA7DC007E4217 /* DictionaryFactory.swift in Sources */,
 				ED10481726FFA4BF007E4217 /* SearchCoordinatorOutput.swift in Sources */,
 				ED4B60DC26FF72B9005A1352 /* BaseNavigationController.swift in Sources */,
@@ -850,6 +909,7 @@
 				ED4B60B726FF7089005A1352 /* CoordinatorFactory.swift in Sources */,
 				ED10481526FFA4BF007E4217 /* SearchCoordinator.swift in Sources */,
 				ED4B60D926FF72B9005A1352 /* NavigationTitleView.swift in Sources */,
+				ED1048CE26FFD3A7007E4217 /* WordsHeaderViewModel.swift in Sources */,
 				ED1048B626FFD07F007E4217 /* UITableView+Extension.swift in Sources */,
 				ED10484926FFB501007E4217 /* SearchPlaceholder.swift in Sources */,
 				ED4B60B826FF7089005A1352 /* BaseViewProtocol.swift in Sources */,

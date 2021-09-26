@@ -25,7 +25,7 @@ protocol SearchPresenterOutput: AnyObject {
     
     var presenter: SearchPresenterInput? { get set }
     
-    // TODO: presentation output methods
+    func prepareData(with data: [SearchResponseModel])
 }
 
 final class SearchPresenter {
@@ -34,7 +34,22 @@ final class SearchPresenter {
     
     var interactor: SearchInteractor?
     
-    // TODO: implement interactor methods
+    private var searchWords = [SearchResponseModel]()
+    
+    /// a flag for when all database items have already been loaded
+    private var reachedEndOfItems = false
+    
+    func onSuccessSearch(with data: SearchResponseData, is add: Bool) {
+        if add {
+            searchWords.append(contentsOf: data)
+        } else {
+            searchWords = data
+        }
+        
+        reachedEndOfItems = data.isEmpty ? true : false
+        
+        output?.prepareData(with: searchWords)
+    }
 }
 
 // MARK: - SearchPresenterInput
@@ -42,12 +57,19 @@ final class SearchPresenter {
 extension SearchPresenter: SearchPresenterInput {
     
     func didEnteredSearch(with text: String?) {
+        guard let text = text, !text.isEmpty else {
+            didRemovedTextFromSearch()
+            return
+        }
         interactor?.searchText(
-            with: SearchRequest(search: text ?? ""),
+            with: SearchRequest(search: text),
             is: false
         )
     }
     
     func didRemovedTextFromSearch() {
+        searchWords.removeAll()
+        reachedEndOfItems = false
+        output?.prepareData(with: searchWords)
     }
 }

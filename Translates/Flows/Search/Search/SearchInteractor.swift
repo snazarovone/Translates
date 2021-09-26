@@ -24,8 +24,7 @@ final class SearchInteractor {
         apiWrapper.searchWord(with: request) { [weak self] result in
             switch result {
             case .success(let responseData):
-                print("")
-                break
+                self?.presenter?.onSuccessSearch(with: responseData, is: add)
             case .failure(let error):
                 print(error.localizedDescription)
             }

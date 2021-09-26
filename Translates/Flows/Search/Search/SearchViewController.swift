@@ -19,11 +19,21 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     
     private let searchBar = SearchBarTranslate()
     private let placeholderView = SearchPlaceholder()
+    
+    var dataSource: SearchDataSource?
+    
+    private let tableView: UITableView = {
+        let tv = UITableView()
+        tv.separatorStyle = .none
+        tv.backgroundColor = .clear
+        return tv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .tWhite
+        registerForKeyboardNotifications()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +43,10 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     }
     
     override func initUI() {
-        view.addSubviews(searchBar, placeholderView)
+        view.addSubviews(placeholderView, tableView, searchBar)
+        
+        tableView.delegate = self
+        dataSource = SearchDataSource(tableView: tableView)
     }
     
     override func initConstraints() {
@@ -46,9 +59,22 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
             make.centerX.centerY.equalToSuperview()
             make.left.equalToSuperview().offset(32)
         }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     func keyboardWillChange(height: CGFloat) {
+        let margin = height == 0 ? 0 : -height + 64
+        tableView.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().offset(margin)
+        }
+        placeholderView.snp.updateConstraints { make in
+            make.centerY.equalToSuperview().offset(margin/2)
+        }
     }
     
     override func initListeners() {
@@ -62,7 +88,7 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         }
         
         searchBar.didTapDeleteKey = { [weak self] in
-            print("delete")
+            self?.presenter?.didRemovedTextFromSearch()
         }
     }
 
@@ -74,7 +100,8 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
 // MARK: - SearchPresenterOutput
 
 extension SearchViewController {
-    
-// TODO: implement output presentation methods
-    
+    func prepareData(with data: [SearchResponseModel]) {
+        placeholderView.isHidden = !data.isEmpty
+        dataSource?.prepareData(with: data)
+    }
 }

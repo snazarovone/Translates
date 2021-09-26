@@ -10,7 +10,7 @@ import Foundation
 struct SearchRequest {
     var search: String
     var page: Int = 1
-    var pageSize: Int = 200
+    var pageSize: Int = 20
 }
 
 extension SearchRequest {
