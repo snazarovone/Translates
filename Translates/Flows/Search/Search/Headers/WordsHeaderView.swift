@@ -14,6 +14,8 @@ class WordsHeaderView: UITableViewHeaderFooterView {
     @IBOutlet private weak var topWordLbl: UILabel!
     @IBOutlet private weak var bottomWordLbl: UILabel!
     
+    private var model: WordsHeaderViewModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -32,9 +34,16 @@ class WordsHeaderView: UITableViewHeaderFooterView {
         
         bottomWordLbl.font = .systemFont(ofSize: 12, weight: .semibold)
         bottomWordLbl.textColor = .tGrey
+        
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(handleTap(sender:))
+        )
+        self.addGestureRecognizer(tapGesture)
     }
     
     func configure(with model: WordsHeaderViewModel) {
+        self.model = model
         topWordLbl.text = model.searchWord
         bottomWordLbl.text = model.translates
        
@@ -43,5 +52,9 @@ class WordsHeaderView: UITableViewHeaderFooterView {
             imgUrl: model.urlImg
         )
     }
-
+    
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        print("tap")
+        model?.didCollapsed()
+    }
 }

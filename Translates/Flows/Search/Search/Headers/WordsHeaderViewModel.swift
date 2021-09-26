@@ -16,6 +16,14 @@ class WordsHeaderViewModel: TableViewSectionHeaderCompatible {
     
     let model: SearchResponseModel
     
+    /// Признак свернута ли секция
+    var isCollapsed: Bool
+    
+    /// Порядковый номер секции, для возмоности collapsed  секцию
+    let index: Int
+    
+    private weak var delegate: WordsHeaderDeleagte?
+    
     var searchWord: String? {
         model.text
     }
@@ -45,8 +53,14 @@ class WordsHeaderViewModel: TableViewSectionHeaderCompatible {
             : model.meanings.first?.previewUrl
     }
     
-    init(with model: SearchResponseModel) {
+    init(with model: SearchResponseModel,
+         isCollapsed: Bool,
+         index: Int,
+         delegate: WordsHeaderDeleagte) {
         self.model = model
+        self.isCollapsed = isCollapsed
+        self.index = index
+        self.delegate = delegate
     }
     
     // swiftlint:disable line_length
@@ -56,5 +70,10 @@ class WordsHeaderViewModel: TableViewSectionHeaderCompatible {
         }
         view.configure(with: self)
         return view
+    }
+    
+    /// Свернуть/развернуть секцию
+    func didCollapsed() {
+        delegate?.didCollapsed(by: index)
     }
 }

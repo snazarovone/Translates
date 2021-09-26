@@ -12,5 +12,5 @@ public protocol TableViewSection {
     
     var headerItem: TableViewSectionHeaderCompatible? { get set }
     var items: [TableViewCompatible] { get set }
-    
+    var collapsed: Bool { get set }
 }

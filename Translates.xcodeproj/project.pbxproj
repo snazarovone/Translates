@@ -68,6 +68,7 @@
 		ED1048DD27009A29007E4217 /* WordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1048DA27009A29007E4217 /* WordTableViewCell.xib */; };
 		ED1048DE27009A29007E4217 /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048DB27009A29007E4217 /* WordTableViewCell.swift */; };
 		ED1048DF27009A29007E4217 /* WordCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048DC27009A29007E4217 /* WordCellModel.swift */; };
+		ED1048E527009E8B007E4217 /* WordsHeaderDeleagte.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1048E427009E8B007E4217 /* WordsHeaderDeleagte.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -176,6 +177,7 @@
 		ED1048DA27009A29007E4217 /* WordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTableViewCell.xib; sourceTree = "<group>"; };
 		ED1048DB27009A29007E4217 /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		ED1048DC27009A29007E4217 /* WordCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCellModel.swift; sourceTree = "<group>"; };
+		ED1048E427009E8B007E4217 /* WordsHeaderDeleagte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsHeaderDeleagte.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				ED1048C926FFD3A7007E4217 /* WordsHeaderView.swift */,
 				ED1048CA26FFD3A7007E4217 /* WordsHeaderView.xib */,
 				ED1048CB26FFD3A7007E4217 /* WordsHeaderViewModel.swift */,
+				ED1048E427009E8B007E4217 /* WordsHeaderDeleagte.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -896,6 +899,7 @@
 				ED1048DE27009A29007E4217 /* WordTableViewCell.swift in Sources */,
 				ED9AB74426FF7B63001734B3 /* TranslateLauncherViewController.swift in Sources */,
 				ED4B60DB26FF72B9005A1352 /* UINavigatoionBar+Extension.swift in Sources */,
+				ED1048E527009E8B007E4217 /* WordsHeaderDeleagte.swift in Sources */,
 				ED10485726FFBE3A007E4217 /* BaseTargetType.swift in Sources */,
 				ED10485A26FFBE3A007E4217 /* APIErrorResponse.swift in Sources */,
 				ED1048B426FFD07F007E4217 /* TableViewSectionHeaderCompatible.swift in Sources */,

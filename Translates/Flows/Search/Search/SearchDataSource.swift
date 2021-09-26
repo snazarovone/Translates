@@ -20,10 +20,17 @@ class SearchDataSource: TableViewDataSource {
     
     func prepareData(with data: [SearchResponseModel]) {
         
-        sections = data.map({
+        sections = data.enumerated().map({
             SearchTableViewSection(
-                headerItem: WordsHeaderViewModel(with: $0),
-                items: [],
+                headerItem: WordsHeaderViewModel(
+                    with: $0.element,
+                    isCollapsed: true,
+                    index: $0.offset,
+                    delegate: self
+                ),
+                items: $0.element.meanings.map({
+                    WordCellModel(with: $0)
+                }),
                 collapsed: true
             )
         })
@@ -40,8 +47,26 @@ class SearchDataSource: TableViewDataSource {
             forHeaderFooterViewReuseIdentifier: sectionHeaderWordNibName
         )
         
-//        tableView.register(nibWithCellClass: LabelTableViewCell.self)
+        tableView.register(nibWithCellClass: WordTableViewCell.self)
     }
-    
+}
+
+extension SearchDataSource: WordsHeaderDeleagte {
+    func didCollapsed(by index: Int) {
+        sections[index].collapsed = !sections[index].collapsed
+        (sections[index].headerItem as? WordsHeaderViewModel)?.isCollapsed =
+            sections[index].collapsed
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            if !self.sections[index].items.isEmpty,
+               self.sections[index].collapsed == false {
+                self.tableView.scrollToRow(
+                    at: IndexPath(item: 0, section: index),
+                    at: .top, animated: true
+                )
+            }
+        }
+    }
 }
 

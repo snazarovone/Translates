@@ -27,7 +27,7 @@ class WordTableViewCell: UITableViewCell, Configurable {
         
         logoImg.backgroundColor = .tGrey
         logoImg.layer.cornerRadius = 8
-        logoImg.contentMode = .scaleAspectFit
+        logoImg.contentMode = .scaleAspectFill
         logoImg.clipsToBounds = true
     }
     
@@ -37,7 +37,7 @@ class WordTableViewCell: UITableViewCell, Configurable {
         
         DownloadImgManager.setImage(
             with: URL(
-                string: "http://\((model.urlImg ?? "").trimmingCharacters(in: CharacterSet(charactersIn: "//")))"
+                string: "http://\(model.urlImg ?? "")"
             ),
             imageView: logoImg
         )

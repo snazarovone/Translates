@@ -54,7 +54,7 @@ class WordsHolder: UIView {
     private let img: UIImageView = {
         let img = UIImageView()
         img.layer.cornerRadius = 8
-        img.contentMode = .scaleAspectFit
+        img.contentMode = .scaleAspectFill
         img.clipsToBounds = true
         return img
     }()
@@ -91,9 +91,7 @@ class WordsHolder: UIView {
         
         if let imgUrl = imgUrl {
             DownloadImgManager.setImage(
-                with: URL(
-                    string: "http://\(imgUrl.trimmingCharacters(in: CharacterSet(charactersIn: "//")))"
-                ),
+                with: URL(string: "http:\(imgUrl)"),
                 imageView: img
             )
         } else {

@@ -39,7 +39,7 @@ public extension TableViewData {
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        sections[section].items.count
+        sections[section].collapsed ? 0 : sections[section].items.count
     }
     
     func cellForTableView(tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell {
