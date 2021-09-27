@@ -106,6 +106,8 @@
 		ED10496B27012FF2007E4217 /* DictionaryTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10496827012FF2007E4217 /* DictionaryTableViewSection.swift */; };
 		ED10496C27012FF2007E4217 /* DictionaryViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10496927012FF2007E4217 /* DictionaryViewController+UITableView.swift */; };
 		ED1049D6270205F3007E4217 /* WordCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1049D5270205F3007E4217 /* WordCellDelegate.swift */; };
+		ED104A0D27021593007E4217 /* TranslatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A0C27021593007E4217 /* TranslatesTests.swift */; };
+		ED104A172702211E007E4217 /* MockTableViewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A162702211E007E4217 /* MockTableViewSearch.swift */; };
 		ED4B607226FF4DFE005A1352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607126FF4DFE005A1352 /* Assets.xcassets */; };
 		ED4B607526FF4DFE005A1352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */; };
 		ED4B60A926FF7089005A1352 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B609926FF7089005A1352 /* AppCoordinator.swift */; };
@@ -150,6 +152,16 @@
 		ED9AB78926FFA203001734B3 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB78126FFA203001734B3 /* TabBarInteractor.swift */; };
 		ED9AB78A26FFA203001734B3 /* TabBarViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AB78226FFA203001734B3 /* TabBarViewProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED104A0F27021593007E4217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4B606026FF4DFA005A1352 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED4B606726FF4DFA005A1352;
+			remoteInfo = Translates;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		471FF03AEA1743760A8B2D05 /* Pods-Translates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translates.debug.xcconfig"; path = "Target Support Files/Pods-Translates/Pods-Translates.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +264,10 @@
 		ED10496827012FF2007E4217 /* DictionaryTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewSection.swift; sourceTree = "<group>"; };
 		ED10496927012FF2007E4217 /* DictionaryViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryViewController+UITableView.swift"; sourceTree = "<group>"; };
 		ED1049D5270205F3007E4217 /* WordCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCellDelegate.swift; sourceTree = "<group>"; };
+		ED104A0A27021593007E4217 /* TranslatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED104A0C27021593007E4217 /* TranslatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatesTests.swift; sourceTree = "<group>"; };
+		ED104A0E27021593007E4217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED104A162702211E007E4217 /* MockTableViewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewSearch.swift; sourceTree = "<group>"; };
 		ED4B606826FF4DFA005A1352 /* Translates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4B607126FF4DFE005A1352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B607426FF4DFE005A1352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -301,6 +317,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED104A0727021593007E4217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED4B606526FF4DFA005A1352 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,10 +677,21 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		ED104A0B27021593007E4217 /* TranslatesTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED104A0C27021593007E4217 /* TranslatesTests.swift */,
+				ED104A162702211E007E4217 /* MockTableViewSearch.swift */,
+				ED104A0E27021593007E4217 /* Info.plist */,
+			);
+			path = TranslatesTests;
+			sourceTree = "<group>";
+		};
 		ED4B605F26FF4DFA005A1352 = {
 			isa = PBXGroup;
 			children = (
 				ED4B606A26FF4DFA005A1352 /* Translates */,
+				ED104A0B27021593007E4217 /* TranslatesTests */,
 				ED4B606926FF4DFA005A1352 /* Products */,
 				1F532E4CFE413B73C526CAD9 /* Pods */,
 				3D3F80F0B47AB2081C23001E /* Frameworks */,
@@ -668,6 +702,7 @@
 			isa = PBXGroup;
 			children = (
 				ED4B606826FF4DFA005A1352 /* Translates.app */,
+				ED104A0A27021593007E4217 /* TranslatesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -939,6 +974,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ED104A0927021593007E4217 /* TranslatesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED104A1327021593007E4217 /* Build configuration list for PBXNativeTarget "TranslatesTests" */;
+			buildPhases = (
+				ED104A0627021593007E4217 /* Sources */,
+				ED104A0727021593007E4217 /* Frameworks */,
+				ED104A0827021593007E4217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED104A1027021593007E4217 /* PBXTargetDependency */,
+			);
+			name = TranslatesTests;
+			productName = TranslatesTests;
+			productReference = ED104A0A27021593007E4217 /* TranslatesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ED4B606726FF4DFA005A1352 /* Translates */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED4B607926FF4DFE005A1352 /* Build configuration list for PBXNativeTarget "Translates" */;
@@ -967,6 +1020,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					ED104A0927021593007E4217 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = ED4B606726FF4DFA005A1352;
+					};
 					ED4B606726FF4DFA005A1352 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -986,11 +1043,19 @@
 			projectRoot = "";
 			targets = (
 				ED4B606726FF4DFA005A1352 /* Translates */,
+				ED104A0927021593007E4217 /* TranslatesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ED104A0827021593007E4217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED4B606626FF4DFA005A1352 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1052,6 +1117,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ED104A0627021593007E4217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED104A172702211E007E4217 /* MockTableViewSearch.swift in Sources */,
+				ED104A0D27021593007E4217 /* TranslatesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED4B606426FF4DFA005A1352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1193,6 +1267,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		ED104A1027021593007E4217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED4B606726FF4DFA005A1352 /* Translates */;
+			targetProxy = ED104A0F27021593007E4217 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		ED4B607326FF4DFE005A1352 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1205,6 +1287,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ED104A1127021593007E4217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Y2Z2X7Z2;
+				INFOPLIST_FILE = TranslatesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snazarov.TranslatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Translates.app/Translates";
+			};
+			name = Debug;
+		};
+		ED104A1227021593007E4217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9Y2Z2X7Z2;
+				INFOPLIST_FILE = TranslatesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snazarov.TranslatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Translates.app/Translates";
+			};
+			name = Release;
+		};
 		ED4B607726FF4DFE005A1352 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1366,6 +1490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED104A1327021593007E4217 /* Build configuration list for PBXNativeTarget "TranslatesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED104A1127021593007E4217 /* Debug */,
+				ED104A1227021593007E4217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ED4B606326FF4DFA005A1352 /* Build configuration list for PBXProject "Translates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

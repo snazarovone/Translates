@@ -18,12 +18,12 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
     var onCompletion: CompletionBlock?
     var onDetailWord: DetailWordBlock?
     
-    private let searchBar = SearchBarTranslate()
-    private let placeholderView = SearchPlaceholder()
+    internal let searchBar = SearchBarTranslate()
+    internal let placeholderView = SearchPlaceholder()
     
     var dataSource: SearchDataSource?
     
-    private let tableView: UITableView = {
+    internal let tableView: UITableView = {
         let tv = UITableView()
         tv.separatorStyle = .none
         tv.backgroundColor = .clear
