@@ -16,6 +16,7 @@ final class NavigationItemManager {
     
     enum NavigationItemButtonType {
         case back
+        case close
     }
     
     enum ItemPosition {
@@ -35,6 +36,9 @@ final class NavigationItemManager {
         switch navigationItemButtonType {
         case .back:
             image = UIImage(named: "navbar_icon_arrow_left")
+            title = nil
+        case .close:
+            image = UIImage(named: "icon_close")
             title = nil
         }
         

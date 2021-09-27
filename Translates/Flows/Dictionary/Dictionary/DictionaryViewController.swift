@@ -26,6 +26,7 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
         tv.backgroundColor = .clear
         tv.estimatedSectionHeaderHeight = 54
         tv.estimatedRowHeight = 54
+        tv.keyboardDismissMode = .onDrag
         return tv
     }()
 

@@ -11,7 +11,9 @@ import UIKit
 /**
  Полная информация о слове
  */
-class DetailWordViewController: BaseViewController, DetailWordAssemblable {
+class DetailWordViewController: BaseViewController,
+                                DetailWordAssemblable,
+                                WithNavigationItem {
     
     var presenter: DetailWordPresenterInput?
     
@@ -67,6 +69,10 @@ class DetailWordViewController: BaseViewController, DetailWordAssemblable {
     override func initListeners() {
         dictAction.touchUp = { [weak self] _ in
             self?.presenter?.dictionaryAction()
+        }
+        
+        navigationItem(set: .right(type: .close)) { [weak self] _ in
+            self?.onCompletion?()
         }
     }
 
