@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class SearchInteractor {
 
     unowned var presenter: SearchPresenter?
     
     private let apiWrapper = APIWrapperMain()
+    
+    private let realmManager = RealmService.shared
+    private var notification: NotificationToken?
+
+    private (set) var words = [MeaningsModel]()
+    
     
     /**
      Постраничный поиск слов
@@ -29,5 +36,31 @@ final class SearchInteractor {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func observeCategory() {
+        let words = realmManager.getObjectWordModel()
+        
+        // Observe Results Notifications
+        notification = words.observe({ [weak self] change in
+            guard let self = self else {
+                return
+            }
+            switch change {
+            case .initial(let listObject):
+                self.words = Array(listObject).compactMap({ $0.meaningsModel })
+                self.presenter?.reloadData()
+            case .error(let error):
+                print(error)
+            case .update(let listObject, _, _, _):
+                self.words = Array(listObject).compactMap({ $0.meaningsModel })
+                self.presenter?.reloadData()
+            }
+        })
+    }
+    
+    deinit {
+        notification?.invalidate()
+        print("DictionaryInteractor is deinit")
     }
 }

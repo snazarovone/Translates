@@ -13,6 +13,7 @@ class WordsHeaderView: UITableViewHeaderFooterView {
     @IBOutlet private weak var wordsHeaders: WordsHolder!
     @IBOutlet private weak var topWordLbl: UILabel!
     @IBOutlet private weak var bottomWordLbl: UILabel!
+    @IBOutlet private weak var arrowIcon: UIImageView!
     
     private var model: WordsHeaderViewModel?
     
@@ -51,9 +52,30 @@ class WordsHeaderView: UITableViewHeaderFooterView {
             with: model.countMeanings,
             imgUrl: model.urlImg
         )
+        arrowFlip(is: model.isCollapsed, with: false)
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
         model?.didCollapsed()
+        self.arrowFlip(
+            is: !(self.model?.isCollapsed ?? false),
+            with: true
+        )
+    }
+    
+    private func arrowFlip(is flip: Bool, with animate: Bool) {
+        flip
+            ? self.animationFlip(with: -1.0, animate: animate)
+            : self.animationFlip(with: 1.0, animate: animate)
+    }
+    
+    private func animationFlip(with scale: CGFloat, animate: Bool) {
+        if animate {
+            UIView.animate(withDuration: 0.5) {
+                self.arrowIcon?.transform = CGAffineTransform(scaleX: 1, y: -scale)
+            }
+        } else {
+            self.arrowIcon?.transform = CGAffineTransform(scaleX: 1, y: -scale)
+        }
     }
 }

@@ -9,6 +9,9 @@
 import UIKit
 
 protocol SearchPresenterInput: AnyObject {
+   
+    func onStart()
+    
     /**
      Был введен текст поиска
      - Parameter text - Введеный текст
@@ -28,6 +31,9 @@ protocol SearchPresenterInput: AnyObject {
     /// Было выбрано слово
     func didSelectWord(with meaning: MeaningsModel,
                        searchWord: String?)
+    
+    /// Добавить слова в словарь
+    func didAddWordToDictionary(with model: MeaningsModel)
 }
 
 protocol SearchPresenterOutput: AnyObject {
@@ -37,7 +43,8 @@ protocol SearchPresenterOutput: AnyObject {
     /// Показать полную информацию о  слове
     var onDetailWord: DetailWordBlock? { get set }
     
-    func prepareData(with data: [SearchResponseModel])
+    func prepareData(with data: [SearchResponseModel],
+                     my words: [MeaningsModel])
     func loadingData(_ animating: Bool)
 }
 
@@ -54,6 +61,8 @@ final class SearchPresenter {
     private var reachedEndOfItems = false
     private var textSearch = ""
     
+    private let realmService = RealmService.shared
+    
     func onSuccessSearch(with data: SearchResponseData, is add: Bool) {
         if add {
             searchWords.append(contentsOf: data)
@@ -63,7 +72,12 @@ final class SearchPresenter {
         
         reachedEndOfItems = data.isEmpty ? true : false
         output?.loadingData(false)
-        output?.prepareData(with: searchWords)
+        output?.prepareData(with: searchWords, my: interactor?.words ?? [])
+    }
+    
+    func reloadData() {
+        output?.prepareData(with: searchWords,
+                            my: interactor?.words ?? [])
     }
 }
 
@@ -81,6 +95,10 @@ private extension SearchPresenter {
 // MARK: - SearchPresenterInput
 
 extension SearchPresenter: SearchPresenterInput {
+    
+    func onStart() {
+        interactor?.observeCategory()
+    }
     
     func didEnteredSearch(with text: String?) {
         guard let text = text, !text.isEmpty else {
@@ -100,7 +118,8 @@ extension SearchPresenter: SearchPresenterInput {
         textSearch = ""
         searchWords.removeAll()
         reachedEndOfItems = false
-        output?.prepareData(with: searchWords)
+        output?.prepareData(with: searchWords,
+                            my: interactor?.words ?? [])
     }
     
     func isReachedEndOfItems() -> Bool {
@@ -126,5 +145,9 @@ extension SearchPresenter: SearchPresenterInput {
         output?.onDetailWord?(
             DetailWordPresenter.Input(word: searchWord, meaning: meaning)
         )
+    }
+    
+    func didAddWordToDictionary(with model: MeaningsModel) {
+        realmService.updateWord(model)
     }
 }

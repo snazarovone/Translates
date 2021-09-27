@@ -23,26 +23,35 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SRB-uy-AF3">
-                    <rect key="frame" x="86" y="10.5" width="312" height="43"/>
+                    <rect key="frame" x="86" y="10.5" width="278" height="43"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q59-P9-p3W">
-                            <rect key="frame" x="0.0" y="0.0" width="312" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="278" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jS-bi-p7N">
-                            <rect key="frame" x="0.0" y="22.5" width="312" height="20.5"/>
+                            <rect key="frame" x="0.0" y="22.5" width="278" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_down_tt" translatesAutoresizingMaskIntoConstraints="NO" id="ump-zg-qx0">
+                    <rect key="frame" x="372" y="19" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="lPM-ia-LlX"/>
+                        <constraint firstAttribute="width" constant="26" id="vnb-kh-U5B"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="SRB-uy-AF3" firstAttribute="leading" secondItem="gSB-Kf-r0q" secondAttribute="trailing" constant="16" id="8UY-SE-lNu"/>
-                <constraint firstAttribute="trailing" secondItem="SRB-uy-AF3" secondAttribute="trailing" constant="16" id="iNR-3Q-JKU"/>
+                <constraint firstItem="ump-zg-qx0" firstAttribute="centerY" secondItem="SRB-uy-AF3" secondAttribute="centerY" id="AhF-Nm-l8p"/>
+                <constraint firstAttribute="trailing" secondItem="ump-zg-qx0" secondAttribute="trailing" constant="16" id="Is8-12-Dpb"/>
+                <constraint firstItem="ump-zg-qx0" firstAttribute="leading" secondItem="SRB-uy-AF3" secondAttribute="trailing" constant="8" id="Toy-q2-nbw"/>
                 <constraint firstItem="gSB-Kf-r0q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ikc-TJ-OHf"/>
                 <constraint firstItem="gSB-Kf-r0q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="rAe-8e-JkI"/>
                 <constraint firstItem="gSB-Kf-r0q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" constant="10" id="sF3-B8-aBp"/>
@@ -50,6 +59,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="arrowIcon" destination="ump-zg-qx0" id="hIi-4k-sxT"/>
                 <outlet property="bottomWordLbl" destination="9jS-bi-p7N" id="Bdq-Z5-6Xs"/>
                 <outlet property="topWordLbl" destination="Q59-P9-p3W" id="JdW-wE-CHb"/>
                 <outlet property="wordsHeaders" destination="gSB-Kf-r0q" id="NuY-Fs-JpV"/>
@@ -58,6 +68,7 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow_down_tt" width="26" height="26"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

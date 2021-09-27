@@ -12,11 +12,18 @@ class WordCellModel: TableViewCompatible {
     
     let meaning: MeaningsModel
     let searchWord: String?
+    let add: Bool
+    
+    private weak var delegate: WordCellDelegate?
     
     init(with meaning: MeaningsModel,
-         searchWord: String?) {
+         searchWord: String?,
+         is add: Bool,
+         delegate: WordCellDelegate?) {
         self.meaning = meaning
         self.searchWord = searchWord
+        self.add = add
+        self.delegate = delegate
     }
     
     /// Перевод
@@ -45,4 +52,8 @@ class WordCellModel: TableViewCompatible {
     }
     
     var selected = false
+    
+    func addToDictionary() {
+        delegate?.addToDictionary(with: meaning)
+    }
 }

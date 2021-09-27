@@ -11,6 +11,7 @@ class WordTableViewCell: UITableViewCell, Configurable {
 
     @IBOutlet private weak var wordLbl: UILabel!
     @IBOutlet private weak var logoImg: UIImageView!
+    @IBOutlet private weak var addWordBtn: ActionButton!
     
     var model: WordCellModel?
     
@@ -18,6 +19,7 @@ class WordTableViewCell: UITableViewCell, Configurable {
         super.awakeFromNib()
         
         initUI()
+        initListener()
     }
     
     func initUI() {
@@ -41,5 +43,12 @@ class WordTableViewCell: UITableViewCell, Configurable {
             ),
             imageView: logoImg
         )
+        addWordBtn.isHidden = !model.add
+    }
+    
+    func initListener() {
+        addWordBtn.touchUp = { [weak self] _ in
+            self?.model?.addToDictionary()
+        }
     }
 }

@@ -21,7 +21,12 @@ class DictionaryDataSource: TableViewDataSource {
         sections = [
             DictionaryTableViewSection(
                 items: data.map({
-                    WordCellModel(with: $0, searchWord: nil)
+                    WordCellModel(
+                        with: $0,
+                        searchWord: nil,
+                        is: false,
+                        delegate: nil
+                    )
                 })
             )
         ]

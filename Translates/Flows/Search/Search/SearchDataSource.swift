@@ -10,7 +10,11 @@ import UIKit
 
 class SearchDataSource: TableViewDataSource {
     
+    var addWordToDictionary: ((MeaningsModel) -> Void)?
+    
     private let sectionHeaderWordNibName = String(describing: WordsHeaderView.self)
+    
+    private var currentOpenSection: Int?
     
     override init(tableView: UITableView) {
         super.init(tableView: tableView)
@@ -18,21 +22,27 @@ class SearchDataSource: TableViewDataSource {
         registerCell()
     }
     
-    func prepareData(with data: [SearchResponseModel]) {
+    func prepareData(with data: [SearchResponseModel],
+                     my words: [MeaningsModel]) {
         
         sections = data.enumerated().map({
             let word = $0.element.text
             return SearchTableViewSection(
                     headerItem: WordsHeaderViewModel(
                     with: $0.element,
-                    isCollapsed: true,
+                        isCollapsed: !((currentOpenSection ?? -1) == $0.offset),
                     index: $0.offset,
                     delegate: self
                 ),
                 items: $0.element.meanings.map({
-                    WordCellModel(with: $0, searchWord: word)
+                    WordCellModel(
+                        with: $0,
+                        searchWord: word,
+                        is: !wordIsExistDict(by: $0.id, my: words),
+                        delegate: self
+                    )
                 }),
-                collapsed: true
+                collapsed: !((currentOpenSection ?? -1) == $0.offset)
             )
         })
         
@@ -50,13 +60,29 @@ class SearchDataSource: TableViewDataSource {
         
         tableView.register(nibWithCellClass: WordTableViewCell.self)
     }
+    
+    private func wordIsExistDict(by wordId: Int,
+                                 my words: [MeaningsModel]) -> Bool {
+        words.first(where: { $0.id == wordId }) != nil
+    }
 }
 
-extension SearchDataSource: WordsHeaderDeleagte {
+extension SearchDataSource: WordsHeaderDeleagte,
+                            WordCellDelegate {
     func didCollapsed(by index: Int) {
+        
+        if let currentOpenSection = currentOpenSection,
+           currentOpenSection < sections.count,
+           index != currentOpenSection {
+            sections[currentOpenSection].collapsed = true
+            (sections[currentOpenSection].headerItem as? WordsHeaderViewModel)?.isCollapsed = true
+        }
+
         sections[index].collapsed = !sections[index].collapsed
         (sections[index].headerItem as? WordsHeaderViewModel)?.isCollapsed =
             sections[index].collapsed
+        
+        currentOpenSection = index
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -68,6 +94,10 @@ extension SearchDataSource: WordsHeaderDeleagte {
                 )
             }
         }
+    }
+    
+    func addToDictionary(with model: MeaningsModel) {
+        addWordToDictionary?(model)
     }
 }
 

@@ -50,6 +50,8 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         
         tableView.delegate = self
         dataSource = SearchDataSource(tableView: tableView)
+        
+        presenter?.onStart()
     }
     
     override func initConstraints() {
@@ -93,6 +95,10 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
         searchBar.didTapDeleteKey = { [weak self] in
             self?.presenter?.didRemovedTextFromSearch()
         }
+        
+        dataSource?.addWordToDictionary = { [weak self] word in
+            self?.presenter?.didAddWordToDictionary(with: word)
+        }
     }
 
     deinit {
@@ -103,9 +109,10 @@ class SearchViewController: BaseViewController, SearchAssemblable, KeyboardNotif
 // MARK: - SearchPresenterOutput
 
 extension SearchViewController {
-    func prepareData(with data: [SearchResponseModel]) {
+    func prepareData(with data: [SearchResponseModel],
+                     my words: [MeaningsModel]) {
         placeholderView.isHidden = !data.isEmpty
-        dataSource?.prepareData(with: data)
+        dataSource?.prepareData(with: data, my: words)
     }
     
     func loadingData(_ animating: Bool) {
