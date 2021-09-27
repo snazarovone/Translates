@@ -14,7 +14,10 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        UITableView.automaticDimension
+        if dataSource?.sections[section].items.count == 1 {
+            return .zero
+        }
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
