@@ -8,6 +8,7 @@
 "add_dictionary"                = "Добавить в словарь";
 "remove_dictionaty"             = "Удалить из словаря";
 "cancel"                        = "Отмена";
+"remove_all"                    = "Удалить все";
 
 /* Alerts */
 "no"                            = "Нет";
@@ -24,3 +25,4 @@
 
 /* View Controllers Dictionary */
 "my_dict_title"                 = "Мой словарь";
+"you_need_remove_all"           = "Вы действительно хотите удалить все слова в словаре?";

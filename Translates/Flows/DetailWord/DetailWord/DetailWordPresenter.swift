@@ -87,6 +87,8 @@ extension DetailWordPresenter: DetailWordPresenterInput {
             realmService.removeObjectWordModel(by: input.meaning.id)
             styleButton = StyleButton.add(title: "add_dictionary".localized)
             output?.updateStyleAction(with: styleButton)
+        default:
+            break
         }
     }
 }

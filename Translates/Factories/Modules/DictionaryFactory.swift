@@ -13,4 +13,7 @@ protocol DictionaryFactory {
     /// Словарь
     func makeDictionaryView() -> DictionaryViewProtocol
     
+    /// Диалог отчистить БД
+    func makeDialogRemoveView() -> DialogRemoveViewProtocol
+    
 }

@@ -10,6 +10,8 @@ import UIKit
 enum StyleButton {
     case add(title: String)
     case remove(title: String)
+    case yes(title: String)
+    case cancel(title: String)
 }
 
 extension StyleButton {
@@ -19,6 +21,10 @@ extension StyleButton {
             return .tGreen
         case .remove:
             return .tRed
+        case .yes:
+            return .lightGray
+        case .cancel:
+            return .gray
         }
     }
 }

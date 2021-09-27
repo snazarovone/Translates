@@ -14,6 +14,12 @@ final class ModulesFactory:
     DictionaryFactory,
     DetailWordFactory
 {
+    func makeDialogRemoveView() -> DialogRemoveViewProtocol {
+        let view = DialogRemoveViewController()
+        DialogRemoveAssembly.assembly(with: view)
+        return view
+    }
+    
     func makeDetailWordView(with input: DetailWordPresenter.Input)
     -> DetailWordViewProtocol {
         let view = DetailWordViewController()

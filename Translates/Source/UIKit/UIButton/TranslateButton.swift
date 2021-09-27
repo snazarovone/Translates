@@ -33,6 +33,10 @@ class TranslateButton: ActionButton {
             self.setTitle(title, for: .normal)
         case .remove(let title):
             self.setTitle(title, for: .normal)
+        case .yes(let title):
+            self.setTitle(title, for: .normal)
+        case .cancel(let title):
+            self.setTitle(title, for: .normal)
         }
     }
 }

@@ -44,6 +44,10 @@ private extension DictionaryCoordinator {
             self?.performDetailWord(with: input)
         }
         
+        view.onDialogRemove = { [weak self] in
+            self?.showDialogRemove()
+        }
+        
         router.setRootModule(view, hideNavigationBar: false, rootAnimated: true)
     }
     
@@ -61,5 +65,15 @@ private extension DictionaryCoordinator {
         
         addDependency(coordinator)
         (coordinator as? DetailWordCoordinator)?.start(with: input)
+    }
+    
+    func showDialogRemove() {
+        let view = factory.makeDialogRemoveView()
+        
+        view.onCompletion = { [weak self] in
+            self?.router.dismissModule()
+        }
+        
+        router.presentOverfullscreen(view, animated: true)
     }
 }

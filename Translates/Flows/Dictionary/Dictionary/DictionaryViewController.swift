@@ -17,6 +17,7 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
     
     var onCompletion: CompletionBlock?
     var onDetailWord: DetailWordBlock?
+    var onDialogRemove: (() -> Void)?
     
     private let searchBar = SearchBarTranslate()
     
@@ -86,6 +87,10 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
         
         searchBar.didTapDeleteKey = { [weak self] in
             self?.presenter?.didRemovedTextFromSearch()
+        }
+        
+        navigationItem(set: .right(type: .removeAll)) { [weak self] _ in
+            self?.onDialogRemove?()
         }
     }
 

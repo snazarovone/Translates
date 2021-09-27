@@ -17,6 +17,7 @@ final class NavigationItemManager {
     enum NavigationItemButtonType {
         case back
         case close
+        case removeAll
     }
     
     enum ItemPosition {
@@ -40,6 +41,9 @@ final class NavigationItemManager {
         case .close:
             image = UIImage(named: "icon_close")
             title = nil
+        case .removeAll:
+            image = nil
+            title = "remove_all".localized
         }
         
         return image != nil ? image?.withRenderingMode(.alwaysOriginal) : title

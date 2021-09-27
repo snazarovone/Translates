@@ -14,4 +14,7 @@ protocol DictionaryViewProtocol: BaseViewProtocol {
     
     /// Показать полную информацию о  слове
     var onDetailWord: DetailWordBlock? { get set }
+    
+    /// Диалог отчистить БД
+    var onDialogRemove: (() -> Void)? { get set }
 }
