@@ -16,15 +16,21 @@ class DictionaryDataSource: TableViewDataSource {
         registerCell()
     }
     
-    func prepareData() {
+    func prepareData(with data: [MeaningsModel]) {
         
-        sections = [DictionaryTableViewSection]()
+        sections = [
+            DictionaryTableViewSection(
+                items: data.map({
+                    WordCellModel(with: $0, searchWord: nil)
+                })
+            )
+        ]
         
         tableView.reloadData()
     }
     
     private func registerCell() {
-//        tableView.register(nibWithCellClass: LabelTableViewCell.self)
+        tableView.register(nibWithCellClass: WordTableViewCell.self)
     }
     
 }

@@ -54,9 +54,9 @@ final class DetailWordPresenter {
 
 private extension DetailWordPresenter {
     func prepareData() {
-        output?.setTitleNavigation(with: input.word)
+        output?.setTitleNavigation(with: input.word ?? meanings?.text ?? "")
         output?.prepareData(
-            word: input.word,
+            word: input.word ?? meanings?.text ?? "",
             meaning: input.meaning,
             model: meanings
         )
@@ -93,7 +93,7 @@ extension DetailWordPresenter: DetailWordPresenterInput {
 
 extension DetailWordPresenter {
     struct Input {
-        var word: String
+        var word: String?
         var meaning: MeaningsModel
     }
 }

@@ -40,6 +40,10 @@ private extension DictionaryCoordinator {
     func performFlow() {
         let view = factory.makeDictionaryView()
         
+        view.onDetailWord = { [weak self] input in
+            self?.performDetailWord(with: input)
+        }
+        
         router.setRootModule(view, hideNavigationBar: false, rootAnimated: true)
     }
     

@@ -9,13 +9,31 @@
 import UIKit
 
 protocol DictionaryPresenterInput: AnyObject {
+    func onStart()
+    /**
+     Был введен текст поиска
+     - Parameter text - Введеный текст
+     */
+    func didEnteredSearch(with text: String?)
+    
+    /**
+     SearchBar был отчищен
+     */
+    func didRemovedTextFromSearch()
+    
+    /// Было выбрано слово
+    func didSelectWord(with meaning: MeaningsModel,
+                       searchWord: String?)
 }
 
 protocol DictionaryPresenterOutput: AnyObject {
     
     var presenter: DictionaryPresenterInput? { get set }
     
-    // TODO: presentation output methods
+    /// Показать полную информацию о  слове
+    var onDetailWord: DetailWordBlock? { get set }
+    
+    func prepareData(with data: [MeaningsModel])
 }
 
 final class DictionaryPresenter {
@@ -23,13 +41,40 @@ final class DictionaryPresenter {
     weak var output: DictionaryPresenterOutput?
     
     var interactor: DictionaryInteractor?
+    private var textSearch: String?
     
-    // TODO: implement interactor methods
+    func reloadData(with words: [MeaningsModel]) {
+        output?.prepareData(with: words)
+    }
 }
 
 // MARK: - DictionaryPresenterInput
 
 extension DictionaryPresenter: DictionaryPresenterInput {
-    // TODO: implement input presentation methods
-
+    func onStart() {
+        interactor?.observeCategory()
+    }
+    
+    func didEnteredSearch(with text: String?) {
+        textSearch = text
+        guard let text = text else {
+            reloadData(with: interactor?.words ?? [])
+            return
+        }
+        let filterWords = interactor?.words.filter({
+            $0.translation?.text?.lowercased().range(of: text.lowercased()) != nil
+        })
+        reloadData(with: filterWords ?? [])
+    }
+    
+    func didRemovedTextFromSearch() {
+        textSearch = nil
+        reloadData(with: interactor?.words ?? [])
+    }
+    
+    func didSelectWord(with meaning: MeaningsModel, searchWord: String?) {
+        output?.onDetailWord?(
+            DetailWordPresenter.Input(word: searchWord, meaning: meaning)
+        )
+    }
 }

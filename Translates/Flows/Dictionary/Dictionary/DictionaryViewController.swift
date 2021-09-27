@@ -16,6 +16,7 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
     var presenter: DictionaryPresenterInput?
     
     var onCompletion: CompletionBlock?
+    var onDetailWord: DetailWordBlock?
     
     private let searchBar = SearchBarTranslate()
     
@@ -46,8 +47,11 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
     override func initUI() {
         title = "my_dict_title".localized
         
-        view.addSubviews(searchBar, tableView)
+        view.addSubviews(tableView, searchBar)
         dataSource = DictionaryDataSource(tableView: tableView)
+        tableView.delegate = self
+        
+        presenter?.onStart()
     }
     
     override func initConstraints() {
@@ -72,16 +76,15 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
     
     override func initListeners() {
         searchBar.searchWithText = { [weak self] text in
-            // Выполнить запрос поиска по кнопке поиск
-//            self?.presenter?.didEnteredSearch(with: text)
+            self?.presenter?.didEnteredSearch(with: text)
         }
         
         searchBar.textDidChange = { [weak self] text in
-//            self?.presenter?.didEnteredSearch(with: text)
+            self?.presenter?.didEnteredSearch(with: text)
         }
         
         searchBar.didTapDeleteKey = { [weak self] in
-//            self?.presenter?.didRemovedTextFromSearch()
+            self?.presenter?.didRemovedTextFromSearch()
         }
     }
 
@@ -94,7 +97,7 @@ class DictionaryViewController: BaseViewController, DictionaryAssemblable, WithN
 // MARK: - DictionaryPresenterOutput
 
 extension DictionaryViewController {
-    
-// TODO: implement output presentation methods
-    
+    func prepareData(with data: [MeaningsModel]) {
+        dataSource?.prepareData(with: data)
+    }
 }

@@ -124,7 +124,7 @@ extension SearchPresenter: SearchPresenterInput {
                        searchWord: String?) {
         
         output?.onDetailWord?(
-            DetailWordPresenter.Input(word: searchWord ?? "", meaning: meaning)
+            DetailWordPresenter.Input(word: searchWord, meaning: meaning)
         )
     }
 }
