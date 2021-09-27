@@ -1,0 +1,28 @@
+/* Alerts Description */
+"internet_error"                = "Проверьте интернет соединения и повторите попытку";
+
+/* Alerts Title */
+"error"                         = "Ошибка";
+
+/* Buttons */
+"add_dictionary"                = "Добавить в словарь";
+"remove_dictionaty"             = "Удалить из словаря";
+"cancel"                        = "Отмена";
+"remove_all"                    = "Удалить все";
+
+/* Alerts */
+"no"                            = "Нет";
+"yes"                           = "Да";
+"ok"                            = "ОК";
+
+/* TabBar Items */
+"tab_search"                    = "Поиск";
+"tab_dictionary"                = "Словарь";
+
+/* Screens */
+"search_placeholder"            = "Поиск";
+"search_and_add_pl"             = "Ищите слова и списки слов, добавляйте на изучение";
+
+/* View Controllers Dictionary */
+"my_dict_title"                 = "Мой словарь";
+"you_need_remove_all"           = "Вы действительно хотите удалить все слова в словаре?";
