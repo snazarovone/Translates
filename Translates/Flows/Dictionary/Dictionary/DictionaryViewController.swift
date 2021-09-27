@@ -106,4 +106,8 @@ extension DictionaryViewController {
     func prepareData(with data: [MeaningsModel]) {
         dataSource?.prepareData(with: data)
     }
+    
+    func setEnabledRemoveAllBtn(is enabled: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = enabled
+    }
 }

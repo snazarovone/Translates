@@ -34,6 +34,8 @@ protocol DictionaryPresenterOutput: AnyObject {
     var onDetailWord: DetailWordBlock? { get set }
     
     func prepareData(with data: [MeaningsModel])
+    
+    func setEnabledRemoveAllBtn(is enabled: Bool)
 }
 
 final class DictionaryPresenter {
@@ -44,6 +46,7 @@ final class DictionaryPresenter {
     private var textSearch: String?
     
     func reloadData(with words: [MeaningsModel]) {
+        output?.setEnabledRemoveAllBtn(is: !(interactor?.words.isEmpty ?? false))
         output?.prepareData(with: words)
     }
 }
